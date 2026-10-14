@@ -15,7 +15,7 @@ const REASONS = {
 
 const PRO_LIST = [
   'Unlimited products',
-  'Up to 5 staff accounts',
+  'Up to 20 staff accounts',
   'Profit reports and long date ranges',
   'Your own logo on receipts',
 ]

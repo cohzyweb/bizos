@@ -79,7 +79,7 @@ import App, { queryClient } from '../src/app/App.jsx'
 
 const session = { user: { id: 'u1', email: 'adaeze@test.ng', user_metadata: { full_name: 'Adaeze Okonkwo' } } }
 const business = { id: 'b1', name: 'Adaeze Provisions', plan: 'free' }
-const proLimits = { max_products: null, max_staff: 5, report_max_days: null, profit_report: true, receipt_branding: true }
+const proLimits = { max_products: null, max_staff: 20, report_max_days: null, profit_report: true, receipt_branding: true }
 
 function go(path) {
   window.history.pushState({}, '', path)
