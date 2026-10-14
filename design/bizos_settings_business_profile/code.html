@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#eff4ff", "primary": "#005c55", "on-tertiary-container": "#ffe6cc", "outline-variant": "#bdc9c6", "on-surface": "#0b1c30", "on-secondary-container": "#00714d", "secondary-fixed-dim": "#4edea3", "inverse-surface": "#213145", "surface-container-lowest": "#ffffff", "surface-dim": "#cbdbf5", "on-secondary-fixed-variant": "#005236", "on-primary": "#ffffff", "on-tertiary-fixed-variant": "#653e00", "secondary-fixed": "#6ffbbe", "primary-container": "#0f766e", "on-primary-container": "#a3faef", "tertiary": "#734700", "surface-container-highest": "#d3e4fe", "background": "#f8f9ff", "on-tertiary": "#ffffff", "on-error": "#ffffff", "surface-tint": "#006a63", "error-container": "#ffdad6", "inverse-primary": "#80d5cb", "on-secondary": "#ffffff", "secondary-container": "#6cf8bb", "surface-container": "#e5eeff", "outline": "#6e7977", "surface": "#f8f9ff", "primary-fixed-dim": "#80d5cb", "tertiary-fixed": "#ffddb8", "surface-bright": "#f8f9ff", "tertiary-fixed-dim": "#ffb95f", "on-secondary-fixed": "#002113", "on-primary-fixed": "#00201d", "on-tertiary-fixed": "#2a1700", "primary-fixed": "#9cf2e8", "error": "#ba1a1a", "secondary": "#006c49", "inverse-on-surface": "#eaf1ff", "on-primary-fixed-variant": "#00504a", "on-error-container": "#93000a", "on-background": "#0b1c30", "surface-container-high": "#dce9ff", "on-surface-variant": "#3e4947", "tertiary-container": "#945d00", "surface-variant": "#d3e4fe" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-tablet": "1.5rem", "space-md": "0.75rem", "space-xs": "0.25rem", "gutter-desktop": "1.5rem", "gutter": "1.25rem", "space-lg": "1.25rem", "margin-desktop": "2rem", "space-sm": "0.5rem", "space-xl": "2rem", "margin": "1rem" }, "fontFamily": { "display-hero": ["Plus Jakarta Sans"], "label-md": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Inter"], "body-lg": ["Inter"], "metric-numeral": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-lg": ["Inter"], "headline-sm": ["Plus Jakarta Sans"], "label-sm": ["Inter"], "body-sm": ["Inter"] }, "fontSize": { "display-hero": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600"}], "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "metric-numeral": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "headline-lg-mobile": ["26px", {"lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700"}], "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}], "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600"}], "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}] } } } }</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col flex-1 overflow-y-auto"><div class="p-space-lg flex flex-col gap-space-md"><div class="flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[22px]">point_of_sale</span></div><div class="flex items-baseline gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">BizOs</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant uppercase tracking-wider font-bold">Retail OS</span></div></div></div><div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs overflow-hidden"><span class="material-symbols-outlined text-primary text-[18px] shrink-0">storefront</span><div class="flex flex-col truncate"><span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Adaeze Provisions</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Balogun Branch #01</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px] shrink-0">unfold_more</span></div></div><nav class="flex-1 px-space-md flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="font-label-lg text-label-lg">Dashboard</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="new-sale" href="#"><span class="font-label-lg text-label-lg">New Sale (POS)</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-mono">F2</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="products-inventory" href="#"><span class="font-label-lg text-label-lg">Products &amp; Inventory</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant">42/50</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="customers-debts" href="#"><span class="font-label-lg text-label-lg">Customers &amp; Debts</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-semibold">14 owing</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="sales-history" href="#"><span class="font-label-lg text-label-lg">Sales History</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg bg-primary-container text-on-primary font-semibold transition-colors" data-path="reports" href="#"><span class="font-label-lg text-label-lg">Reports (Owner)</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="font-label-lg text-label-lg">Settings</span></a></nav></div><div class="p-space-md flex flex-col gap-space-sm"><div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary"></span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Synced</span><span class="font-body-sm text-body-sm text-on-surface-variant text-[10px] leading-tight">Offline-ready storage</span></div></div><span class="material-symbols-outlined text-secondary text-[16px]">cloud_done</span></div><a class="p-space-sm rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center gap-space-xs hover:bg-secondary-fixed-dim transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">chat</span><span class="font-label-md text-label-md font-semibold">Chat on WhatsApp</span></a><div class="pt-space-xs flex items-center justify-between px-space-xs"><div class="flex items-center gap-space-sm overflow-hidden"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col truncate"><span class="font-label-md text-label-md text-on-surface font-semibold truncate">Adaeze Okonkwo</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Shop Owner</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0">logout</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-lg flex-1 max-w-xl"><div class="w-full flex items-center gap-space-sm px-space-md py-space-xs rounded-lg bg-surface-container-low text-on-surface-variant"><span class="material-symbols-outlined text-[20px]">search</span><span class="font-body-sm text-body-sm text-on-surface-variant flex-1 select-none">Search inventory, sales, customers...</span><kbd class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-mono">/</kbd></div></div><div class="flex items-center gap-space-lg"><div class="hidden xl:flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-secondary-fixed text-on-secondary-fixed"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-sm text-label-sm font-semibold">Synced • All terminals online</span></div><div class="hidden lg:flex flex-col text-right"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Today, 14 Oct</span><span class="font-body-sm text-body-sm text-on-surface-variant">11:42 AM WAT</span></div><button class="w-9 h-9 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center justify-center relative transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error"></span></button><a class="h-10 px-space-md rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md font-semibold flex items-center gap-space-xs transition-colors shadow-[0_1px_8px_rgba(0,0,0,0.04)]" data-path="new-sale" href="#"><span class="material-symbols-outlined text-[18px]">add</span><span>New Sale</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="w-full max-w-[1200px] mx-auto px-margin-desktop py-space-lg flex flex-col gap-space-lg">
+<!-- Header Actions & Breadcrumb -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md pb-space-xs">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<span class="hover:text-primary cursor-pointer transition-colors">Settings &amp; Business Profile</span>
+<span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+<span class="text-on-surface font-semibold">Store Preferences &amp; Hardware Integrations</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface">Store Configuration &amp; Operations Control</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-3xl">
+          Configure shop identity, receipt branding, payment settlement gateways, ESC/POS thermal printers, automated WhatsApp dispatch, and staff security PINs for Adaeze Provisions (Balogun Modern Market Stall #B14).
+        </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 self-start md:self-center">
+<button class="h-10 px-space-md rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-semibold flex items-center gap-space-xs transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">close</span>
+<span>Discard Changes</span>
+</button>
+<button class="h-10 px-space-lg rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold flex items-center gap-space-xs transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Save Settings</span>
+<kbd class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-on-primary/20 text-on-primary font-mono ml-space-xs hidden sm:inline-block">Ctrl+S</kbd>
+</button>
+</div>
+</div>
+<!-- Main Settings Layout (Sidebar + Content Canvas) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Sub-Navigation Menu -->
+<div class="lg:col-span-3 flex flex-col gap-space-xs bg-surface-container-lowest p-space-sm rounded-xl shadow-sm sticky top-20">
+<div class="px-space-md py-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-bold">
+          Navigation
+        </div>
+<a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-colors" href="#identity">
+<span class="material-symbols-outlined text-[20px]">store</span>
+<span class="truncate">Business Profile &amp; ID</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-label-md text-label-md transition-colors" href="#receipts">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+<span class="truncate">Receipt &amp; Invoicing</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-label-md text-label-md transition-colors" href="#settlement">
+<span class="material-symbols-outlined text-[20px]">account_balance</span>
+<span class="truncate">Settlement &amp; Gateways</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-label-md text-label-md transition-colors" href="#hardware">
+<span class="material-symbols-outlined text-[20px]">print</span>
+<span class="truncate">Printers &amp; Peripherals</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-label-md text-label-md transition-colors" href="#whatsapp">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span class="truncate">WhatsApp Automation</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-label-md text-label-md transition-colors" href="#staff">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+<span class="truncate">Staff, Cashiers &amp; PINs</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface font-label-md text-label-md transition-colors" href="#backup">
+<span class="material-symbols-outlined text-[20px]">sync</span>
+<span class="truncate">Sync &amp; Data Backup</span>
+</a>
+<div class="mt-space-md p-space-md bg-surface-container-low rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>BizOs Lagos Node #04</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-snug">
+            Local database encrypted. 1,490 transactions secured offline.
+          </p>
+</div>
+</div>
+<!-- Main Canvas Sections -->
+<div class="lg:col-span-9 flex flex-col gap-space-lg">
+<!-- 1. Section: Business Profile & Identity -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md" id="identity">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">store</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Business Profile &amp; Identity</h2>
+</div>
+<span class="font-label-sm text-label-sm px-space-sm py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold">Active Stall Account</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-space-xs">
+<!-- Logo Preview Card -->
+<div class="flex flex-col gap-space-sm items-center justify-center p-space-md rounded-xl bg-surface-container-low">
+<div class="w-24 h-24 rounded-full overflow-hidden bg-surface-container-lowest shadow-sm flex items-center justify-center relative group">
+<img class="w-full h-full object-cover" data-alt="Vibrant modern market shop logo graphic with Nigerian merchant emblems, deep teal and warm amber palette, clean minimalist vector aesthetic on clean badge" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVwQiWybFY5zKaQ3wtfkjYVpG0frgigJ6gAYiD_rp9dUFbyRS_jWme9edXLAeN5o5yLsVxXL_Hgho_NN4QuogIadysfqoGXPeljUWPJGC-FHmHzo2J7MIYE1dC7evRcKDOGKWC2O4k4_3t9og5dhHEpHOMj22e3BWdP1BpTUQpDQttDwnpg4KfFr_ejMtvYYB9GQ2nd13svJZPeepF0wkxM5dgWYsx5bsL21axDVtpYu5wPeRbvYE-"/>
+<div class="absolute inset-0 bg-on-surface/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity cursor-pointer">
+<span class="material-symbols-outlined text-surface-container-lowest text-[22px]">photo_camera</span>
+</div>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Stall Seal / Logo</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Square PNG/JPG up to 2MB</span>
+</div>
+<button class="px-space-md py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold transition-colors">
+                Replace Brand Mark
+              </button>
+</div>
+<!-- Profile Form Fields -->
+<div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Shop Trading Name</label>
+<div class="flex items-center px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md font-medium">
+                  Adaeze Provisions
+                </div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold">CAC / Business Reg. No.</label>
+<div class="flex items-center px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md font-mono">
+                  RC: 2884910
+                </div>
+</div>
+<div class="sm:col-span-2 flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Physical Market Address</label>
+<div class="flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md">
+<span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
+<span>Shop B14, Balogun Modern Market, Lagos Island, Lagos State</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Trade Classification</label>
+<div class="flex items-center px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md">
+                  Retail Provisions &amp; FMCG Wholesale
+                </div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Base Currency &amp; Timezone</label>
+<div class="flex items-center justify-between px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md">
+<span class="font-semibold text-primary">₦ NGN (Naira)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">WAT (GMT+1)</span>
+</div>
+</div>
+<div class="sm:col-span-2 flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Authorized Proprietor Contact</label>
+<div class="flex flex-wrap items-center justify-between px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">account_circle</span>
+<span class="font-semibold">Adaeze Okonkwo</span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant">
+<span>+234 802 998 7766</span>
+<span>adaeze@provisions.ng</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Section: Receipts & Printing Configuration (with Live Thermal Mockup) -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md" id="receipts">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Receipts &amp; Thermal Printing</h2>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> ESC/POS Protocol Ready
+            </span>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Left: Settings & Toggles -->
+<div class="xl:col-span-7 flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Header Tagline (Prints on top of receipt)</label>
+<input class="px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none" type="text" value="Welcome to Adaeze Provisions • Original FMCG Wholesale &amp; Retail"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Footer Message &amp; Return Policy</label>
+<textarea class="px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none resize-none" rows="2">Thank you for your patronage! / E se pupo! No refunds after 48 hours without receipt.</textarea>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-space-xs">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Thermal Paper Roll Width</label>
+<div class="grid grid-cols-2 gap-space-xs p-1 rounded-lg bg-surface-container-low">
+<button class="py-1.5 rounded-md bg-primary text-on-primary font-label-sm text-label-sm font-semibold transition-colors shadow-sm">
+                      80mm (Standard)
+                    </button>
+<button class="py-1.5 rounded-md text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-semibold transition-colors">
+                      58mm (Pocket)
+                    </button>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Print Barcode / QR Code</label>
+<div class="grid grid-cols-2 gap-space-xs p-1 rounded-lg bg-surface-container-low">
+<button class="py-1.5 rounded-md bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-sm">
+                      QR Invoice Link
+                    </button>
+<button class="py-1.5 rounded-md text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-semibold">
+                      Code128 Barcode
+                    </button>
+</div>
+</div>
+</div>
+<!-- Switches List -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Auto-print thermal receipt on completed sale</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Triggers local print buffer automatically upon cash/transfer validation</span>
+</div>
+<div class="w-12 h-6 rounded-full bg-primary p-0.5 flex items-center justify-end cursor-pointer">
+<div class="w-5 h-5 rounded-full bg-on-primary shadow-sm"></div>
+</div>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Show Customer Outstanding Debt on Slip</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Appends "Total Remaining Debt Balance" at the bottom of the receipt</span>
+</div>
+<div class="w-12 h-6 rounded-full bg-primary p-0.5 flex items-center justify-end cursor-pointer">
+<div class="w-5 h-5 rounded-full bg-on-primary shadow-sm"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Real-time Live Thermal Slip Mockup -->
+<div class="xl:col-span-5 flex flex-col items-center">
+<div class="w-full max-w-[280px] bg-surface-container-lowest p-space-md rounded-xl shadow-md flex flex-col gap-space-xs font-mono text-[11px] leading-tight text-on-surface">
+<div class="text-center pb-2 flex flex-col items-center">
+<span class="font-bold text-[13px] tracking-tight">ADAEZE PROVISIONS</span>
+<span class="text-[10px] text-on-surface-variant">Balogun Modern Market, Stall B14</span>
+<span class="text-[10px] text-on-surface-variant">Lagos Island • Tel: 08029987766</span>
+<span class="text-[9px] text-on-surface-variant mt-1">RC: 2884910</span>
+</div>
+<div class="py-1 text-[10px] flex justify-between text-on-surface-variant">
+<span>TRX #BZ-2024-8902</span>
+<span>14-OCT 11:42</span>
+</div>
+<div class="flex flex-col gap-1 py-1">
+<div class="flex justify-between font-bold">
+<span>ITEM</span>
+<span>QTY x AMT</span>
+</div>
+<div class="flex justify-between">
+<span class="truncate pr-1">Golden Penny Semo 10kg</span>
+<span class="shrink-0">2 x ₦11,200</span>
+</div>
+<div class="flex justify-between">
+<span class="truncate pr-1">Indomie Hungry Man (Ctn)</span>
+<span class="shrink-0">1 x ₦9,400</span>
+</div>
+<div class="flex justify-between">
+<span class="truncate pr-1">Dangote Sugar 50kg</span>
+<span class="shrink-0">1 x ₦88,000</span>
+</div>
+</div>
+<div class="flex flex-col gap-0.5 py-1">
+<div class="flex justify-between">
+<span>Subtotal:</span>
+<span>₦119,800.00</span>
+</div>
+<div class="flex justify-between font-bold text-[12px] pt-1">
+<span>TOTAL PAID:</span>
+<span class="text-primary font-bold">₦119,800.00</span>
+</div>
+<div class="flex justify-between text-[10px] text-on-surface-variant">
+<span>Method:</span>
+<span>Access Bank Webhook</span>
+</div>
+</div>
+<div class="p-1.5 rounded bg-surface-container-low text-[10px] flex justify-between font-semibold mt-1">
+<span>Customer Debt Ledger:</span>
+<span class="text-error">₦0.00 (Cleared)</span>
+</div>
+<div class="pt-2 text-center text-[10px] text-on-surface-variant flex flex-col items-center gap-1">
+<div class="w-16 h-16 bg-surface-container flex items-center justify-center rounded">
+<span class="material-symbols-outlined text-[36px] text-on-surface">qr_code_2</span>
+</div>
+<span>Verify receipt at bizos.ng/rc/8902</span>
+<span class="font-bold text-[9px] mt-0.5">THANK YOU FOR YOUR PATRONAGE! / E SE PUPO!</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-2 text-center">Live Preview • 80mm ESC/POS Raster</span>
+</div>
+</div>
+</section>
+<!-- 3. Section: Payment & Settlement Gateways -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md" id="settlement">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">account_balance_wallet</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Settlement &amp; Instant Webhook Gateways</h2>
+</div>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">add</span> Add Direct Bank Channel
+            </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Access Bank Card -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-on-surface-variant">Primary Commercial Account</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Verified
+                  </span>
+</div>
+<div class="flex items-center gap-space-xs mt-1">
+<div class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary font-bold text-[11px]">
+                    AB
+                  </div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Access Bank Plc</span>
+</div>
+<div class="flex flex-col pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">NUBAN Account Number</span>
+<span class="font-metric-numeral text-metric-numeral text-on-surface font-mono tracking-wide">0123456789</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium mt-0.5">ADAEZE PROVISIONS ENTERPRISES</span>
+</div>
+</div>
+<div class="pt-space-xs text-on-surface-variant font-body-sm text-body-sm flex items-center gap-1 text-[11px]">
+<span class="material-symbols-outlined text-[16px] text-secondary">bolt</span>
+<span>Instant NIP Transfer Webhook Connected</span>
+</div>
+</div>
+<!-- OPay Merchant Wallet Card -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-on-surface-variant">Fintech Wallet</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Active
+                  </span>
+</div>
+<div class="flex items-center gap-space-xs mt-1">
+<div class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary font-bold text-[11px]">
+                    OP
+                  </div>
+<span class="font-headline-sm text-headline-sm text-on-surface">OPay Business</span>
+</div>
+<div class="flex flex-col pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Merchant Virtual Account</span>
+<span class="font-metric-numeral text-metric-numeral text-on-surface font-mono tracking-wide">8029987766</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium mt-0.5">Adaeze Okonkwo / Balogun POS</span>
+</div>
+</div>
+<div class="pt-space-xs text-on-surface-variant font-body-sm text-body-sm flex items-center gap-1 text-[11px]">
+<span class="material-symbols-outlined text-[16px] text-secondary">sync_alt</span>
+<span>Auto-cleared into primary daily at 11:59 PM</span>
+</div>
+</div>
+<!-- Moniepoint POS Pairing Card -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-on-surface-variant">Hardware POS Pairing</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Paired
+                  </span>
+</div>
+<div class="flex items-center gap-space-xs mt-1">
+<div class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary font-bold text-[11px]">
+                    MP
+                  </div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Moniepoint Smart POS</span>
+</div>
+<div class="flex flex-col pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Terminal ID &amp; Serial</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-mono">MP-8201-LAGOS</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium mt-0.5">Connected via USB Web Serial API</span>
+</div>
+</div>
+<div class="pt-space-xs text-on-surface-variant font-body-sm text-body-sm flex items-center gap-1 text-[11px]">
+<span class="material-symbols-outlined text-[16px] text-primary">bluetooth_connected</span>
+<span>Auto-push amounts from POS screen</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Section: WhatsApp Cloud Dispatch & Debt Chasing -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md" id="whatsapp">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">WhatsApp Cloud Dispatch &amp; Debt Alerts</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Automated customer delivery via Meta Official Business Cloud API</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-space-sm py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold">Sender: +234 802 998 7766</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-space-xs">
+<!-- Toggle Item 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Instant E-Receipt Dispatch</span>
+<div class="w-10 h-5 rounded-full bg-primary p-0.5 flex items-center justify-end cursor-pointer">
+<div class="w-4 h-4 rounded-full bg-on-primary shadow-sm"></div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[12px] leading-relaxed">
+                  Automatically delivers a branded PDF and text breakdown to the buyer's WhatsApp number immediately upon checkout.
+                </p>
+</div>
+<div class="text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">done_all</span> Template: Adaeze_Receipt_v2
+              </div>
+</div>
+<!-- Toggle Item 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Overdue Debt Chaser (&gt; 7 Days)</span>
+<div class="w-10 h-5 rounded-full bg-primary p-0.5 flex items-center justify-end cursor-pointer">
+<div class="w-4 h-4 rounded-full bg-on-primary shadow-sm"></div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[12px] leading-relaxed">
+                  Sends courteous weekly reminders to credit customers with outstanding balances, calculating accurate accrued sums.
+                </p>
+</div>
+<div class="text-tertiary-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span> Dispatches every Tuesday at 8:30 AM
+              </div>
+</div>
+<!-- Toggle Item 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Dynamic Transfer Reference</span>
+<div class="w-10 h-5 rounded-full bg-primary p-0.5 flex items-center justify-end cursor-pointer">
+<div class="w-4 h-4 rounded-full bg-on-primary shadow-sm"></div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[12px] leading-relaxed">
+                  Embeds verified Access Bank account details and personalized 6-character payment references in debt reminders.
+                </p>
+</div>
+<div class="text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">verified</span> Reduces reconciliation disputes
+              </div>
+</div>
+</div>
+</section>
+<!-- 5. Section: Staff Access & Cashier PINs -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md" id="staff">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Staff Profiles &amp; Cashier Security PINs</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Control register voiding, debt issuance, and stock counts per staff</span>
+</div>
+</div>
+<button class="px-space-md py-1.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">person_add</span> Add Staff / PIN
+            </button>
+</div>
+<!-- Staff Table / Roster -->
+<div class="flex flex-col gap-space-xs overflow-x-auto">
+<!-- Owner Row -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">shield_person</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Adaeze Okonkwo</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary text-on-primary">Shop Owner</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Full Master Override • All Financials, Debt Write-offs &amp; Catalog Deletion</span>
+</div>
+</div>
+<div class="flex items-center gap-space-lg shrink-0 self-end sm:self-center">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Security PIN</span>
+<span class="font-mono text-on-surface font-bold tracking-widest">•••• (Set)</span>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</div>
+<!-- Senior Cashier Row -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">point_of_sale</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Blessing Nkechi</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-semibold">Senior Cashier</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono">Terminal #01</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">New Sales, Thermal Reprints, Record Customer Debt. Receipt voiding requires Owner PIN.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-lg shrink-0 self-end sm:self-center">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Security PIN</span>
+<span class="font-mono text-on-surface font-bold tracking-widest">•••• (4209)</span>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</div>
+<!-- Floor Assistant Row -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Musa Ibrahim</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-semibold">Floor Stocker</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">View SKU Prices, Barcode Search &amp; Warehouse Restock Count. No checkout permissions.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-lg shrink-0 self-end sm:self-center">
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Security PIN</span>
+<span class="font-mono text-on-surface font-bold tracking-widest">•••• (1180)</span>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Section: Hardware & Peripherals Configuration -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md" id="hardware">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">devices_other</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Connected Hardware &amp; Peripherals</h2>
+</div>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">refresh</span> Scan for USB Devices
+            </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Hardware 1: Thermal Printer -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold">Thermal Printer</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Online
+                  </span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-1">Xprinter XP-Q800</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">80mm Auto-cutter • USB #002 / Raw ESC-POS</span>
+</div>
+<button class="w-full py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">print</span> Print Test Slip
+              </button>
+</div>
+<!-- Hardware 2: Barcode Scanner -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold">1D/2D Barcode Scanner</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Ready
+                  </span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-1">Honeywell Voyager 1400g</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">HID Keyboard Emulation (CR Suffix configured)</span>
+</div>
+<button class="w-full py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">qr_code_scanner</span> Calibrate Beep
+              </button>
+</div>
+<!-- Hardware 3: Cash Drawer -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold">RJ11 Cash Drawer</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Connected
+                  </span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-1">Maken MK-410</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Triggered via 24V pulse from thermal printer</span>
+</div>
+<button class="w-full py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">eject</span> Test Kick Drawer
+              </button>
+</div>
+</div>
+</section>
+<!-- 7. Section: Offline Sync, Storage & Cloud Backups -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md mb-space-xl" id="backup">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">cloud_sync</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Offline-First Engine &amp; Cloud Redundancy</h2>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Synced 2m ago</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-xs">
+<!-- Local Engine Status -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Local Storage Footprint</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-metric-numeral text-metric-numeral text-on-surface font-bold">18.4 MB</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ 500 MB allocated</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden mt-1">
+<div class="h-full bg-primary rounded-full w-[4%]"></div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] mt-1">
+                  Stored in IndexedDB &amp; Native SQLite Agent. Operates seamlessly without internet for up to 30 days.
+                </span>
+</div>
+<button class="mt-space-xs px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold transition-colors flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">file_download</span> Export Database (JSON / CSV Archive)
+              </button>
+</div>
+<!-- Remote Cloud Sync Engine -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Cloud Replica &amp; Continuity</span>
+<div class="flex items-center gap-space-sm mt-1">
+<div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[22px]">cloud_done</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">BizOs Lagos Node (Tier-3 Cloud)</span>
+<span class="font-body-sm text-body-sm text-secondary font-medium text-[11px]">All 50 FMCG Categories mirrored &amp; verified</span>
+</div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] mt-2">
+                  Automatic background synchronization triggers after every closed sale or inventory restock count.
+                </span>
+</div>
+<button class="mt-space-xs px-space-md py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold transition-colors flex items-center justify-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">sync</span> Force Cloud Backup Now
+              </button>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

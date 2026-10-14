@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "background": "#f8f9ff", "surface-tint": "#006a63", "on-primary-fixed": "#00201d", "on-tertiary": "#ffffff", "on-primary": "#ffffff", "inverse-surface": "#213145", "surface-container-highest": "#d3e4fe", "surface-container-high": "#dce9ff", "primary": "#005c55", "inverse-primary": "#80d5cb", "on-secondary": "#ffffff", "secondary": "#006c49", "surface-variant": "#d3e4fe", "surface-container-low": "#eff4ff", "on-tertiary-fixed": "#2a1700", "tertiary-fixed": "#ffddb8", "on-tertiary-fixed-variant": "#653e00", "primary-container": "#0f766e", "tertiary": "#734700", "on-secondary-fixed": "#002113", "on-surface": "#0b1c30", "primary-fixed": "#9cf2e8", "on-background": "#0b1c30", "tertiary-fixed-dim": "#ffb95f", "on-surface-variant": "#3e4947", "secondary-container": "#6cf8bb", "surface-dim": "#cbdbf5", "on-error-container": "#93000a", "error": "#ba1a1a", "error-container": "#ffdad6", "surface-container": "#e5eeff", "inverse-on-surface": "#eaf1ff", "secondary-fixed": "#6ffbbe", "on-tertiary-container": "#ffe6cc", "on-error": "#ffffff", "on-secondary-container": "#00714d", "outline-variant": "#bdc9c6", "surface-bright": "#f8f9ff", "secondary-fixed-dim": "#4edea3", "on-primary-fixed-variant": "#00504a", "on-primary-container": "#a3faef", "outline": "#6e7977", "primary-fixed-dim": "#80d5cb", "tertiary-container": "#945d00", "surface-container-lowest": "#ffffff", "on-secondary-fixed-variant": "#005236", "surface": "#f8f9ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "1rem", "gutter-desktop": "1.5rem", "margin-desktop": "2rem", "space-sm": "0.5rem", "margin-tablet": "1.5rem", "space-lg": "1.25rem", "gutter": "1.25rem", "space-md": "0.75rem", "space-xl": "2rem", "space-xs": "0.25rem" }, "fontFamily": { "headline-md": ["Plus Jakarta Sans"], "label-lg": ["Inter"], "body-sm": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-sm": ["Inter"], "label-md": ["Inter"], "body-lg": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "metric-numeral": ["Plus Jakarta Sans"], "body-md": ["Inter"] }, "fontSize": { "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}], "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}], "headline-lg-mobile": ["26px", {"lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700"}], "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600"}], "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "display-hero": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "metric-numeral": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}] } } } }</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col flex-1 overflow-y-auto"><div class="p-space-lg flex flex-col gap-space-md"><div class="flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[22px]">point_of_sale</span></div><div class="flex items-baseline gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">BizOs</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant uppercase tracking-wider font-bold">Retail OS</span></div></div></div><div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs overflow-hidden"><span class="material-symbols-outlined text-primary text-[18px] shrink-0">storefront</span><div class="flex flex-col truncate"><span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Adaeze Provisions</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Balogun Branch #01</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px] shrink-0">unfold_more</span></div></div><nav class="flex-1 px-space-md flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="font-label-lg text-label-lg">Dashboard</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="new-sale" href="#"><span class="font-label-lg text-label-lg">New Sale (POS)</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-mono">F2</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="products-inventory" href="#"><span class="font-label-lg text-label-lg">Products &amp; Inventory</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant">42/50</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg bg-primary-container text-on-primary font-semibold shadow-[0_1px_4px_rgba(0,0,0,0.08)]" data-path="customers-debts" href="#"><span class="font-label-lg text-label-lg">Customers &amp; Debts</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-semibold">14 owing</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="sales-history" href="#"><span class="font-label-lg text-label-lg">Sales History</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="reports" href="#"><span class="font-label-lg text-label-lg">Reports (Owner)</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="font-label-lg text-label-lg">Settings</span></a></nav></div><div class="p-space-md flex flex-col gap-space-sm"><div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary"></span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Synced</span><span class="font-body-sm text-body-sm text-on-surface-variant text-[10px] leading-tight">Offline-ready storage</span></div></div><span class="material-symbols-outlined text-secondary text-[16px]">cloud_done</span></div><a class="p-space-sm rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center gap-space-xs hover:bg-secondary-fixed-dim transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">chat</span><span class="font-label-md text-label-md font-semibold">Chat on WhatsApp</span></a><div class="pt-space-xs flex items-center justify-between px-space-xs"><div class="flex items-center gap-space-sm overflow-hidden"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col truncate"><span class="font-label-md text-label-md text-on-surface font-semibold truncate">Adaeze Okonkwo</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Shop Owner</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0">logout</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-lg flex-1 max-w-xl"><div class="w-full flex items-center gap-space-sm px-space-md py-space-xs rounded-lg bg-surface-container-low text-on-surface-variant"><span class="material-symbols-outlined text-[20px]">search</span><span class="font-body-sm text-body-sm text-on-surface-variant flex-1 select-none">Search inventory, sales, customers...</span><kbd class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-mono">/</kbd></div></div><div class="flex items-center gap-space-lg"><div class="hidden xl:flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-secondary-fixed text-on-secondary-fixed"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-sm text-label-sm font-semibold">Synced • All terminals online</span></div><div class="hidden lg:flex flex-col text-right"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Today, 14 Oct</span><span class="font-body-sm text-body-sm text-on-surface-variant">11:42 AM WAT</span></div><button class="w-9 h-9 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center justify-center relative transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error"></span></button><a class="h-10 px-space-md rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md font-semibold flex items-center gap-space-xs transition-colors shadow-[0_1px_8px_rgba(0,0,0,0.04)]" data-path="new-sale" href="#"><span class="material-symbols-outlined text-[18px]">add</span><span>New Sale</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="w-full max-w-[1200px] mx-auto px-margin md:px-margin-tablet xl:px-margin-desktop py-space-lg flex flex-col gap-space-lg">
+<!-- HEADER BAR -->
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Customers &amp; Debts</h1>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-semibold">14 Accounts Due</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+          Manage customer credit books, track overdue balances, and dispatch 1-tap WhatsApp payment reminders.
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm shrink-0">
+<button class="h-10 px-space-md rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors shadow-sm flex items-center gap-space-xs font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">download</span>
+<span>Export Debtors (CSV)</span>
+</button>
+<button class="h-10 px-space-md rounded-lg bg-secondary-fixed text-on-secondary-fixed hover:bg-secondary-fixed-dim transition-colors shadow-sm flex items-center gap-space-xs font-label-md text-label-md font-semibold" id="btn-batch-remind" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Batch Remind All (5 Due)</span>
+</button>
+<button class="h-10 px-space-md rounded-lg bg-primary text-on-primary hover:bg-primary-container transition-colors shadow-sm flex items-center gap-space-xs font-label-md text-label-md font-semibold" type="button">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>+ Add Customer / Debt</span>
+</button>
+</div>
+</div>
+<!-- METRIC SUMMARY CARDS (4 BENTO MODULES) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1: Total Debt -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Total Outstanding Debt</span>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-metric-numeral text-metric-numeral text-error font-bold">₦126,300</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-space-md pt-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Across 14 owing customers</span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-semibold">+₦14.2k wk</span>
+</div>
+</div>
+<!-- Card 2: Overdue > 7 Days -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Overdue &gt; 7 Days</span>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-metric-numeral text-metric-numeral text-tertiary font-bold">₦42,000</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-space-md pt-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">3 customers require follow-up</span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-semibold">Action Required</span>
+</div>
+</div>
+<!-- Card 3: Recovered This Month -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Recovered (October)</span>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-metric-numeral text-metric-numeral text-secondary font-bold">₦88,500</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-space-md pt-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">19 debt settlements recorded</span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-semibold">↑ +24% rate</span>
+</div>
+</div>
+<!-- Card 4: Total Customers -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Customer Directory</span>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-metric-numeral text-metric-numeral text-on-surface font-bold">68</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Registered</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">group</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-space-md pt-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">54 cleared balance</span>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-semibold">Balogun #01</span>
+</div>
+</div>
+</div>
+<!-- FILTER & SEARCH CONTROL BAR -->
+<div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm">
+<!-- Search Input -->
+<div class="flex items-center gap-space-sm px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface-variant flex-1 max-w-lg">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant shrink-0">search</span>
+<input class="bg-transparent border-0 outline-none w-full font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant" id="customer-search-input" placeholder="Search customer name, phone number, stall number..." type="text"/>
+<kbd class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-mono shrink-0">/</kbd>
+</div>
+<!-- Quick Aging Filter Tabs -->
+<div class="flex items-center gap-1.5 overflow-x-auto py-1">
+<button class="tab-btn px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-sm text-label-sm whitespace-nowrap transition-colors" type="button">
+          All (68)
+        </button>
+<button class="tab-btn active-tab px-space-sm py-1.5 rounded-lg bg-primary-container text-on-primary font-semibold font-label-sm text-label-sm whitespace-nowrap shadow-sm transition-colors" type="button">
+          Owing (14)
+        </button>
+<button class="tab-btn px-space-sm py-1.5 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed hover:bg-tertiary-fixed-dim font-label-sm text-label-sm whitespace-nowrap transition-colors flex items-center gap-1" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>Overdue &gt;7d (3)</span>
+</button>
+<button class="tab-btn px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-sm text-label-sm whitespace-nowrap transition-colors" type="button">
+          Cleared (54)
+        </button>
+<button class="tab-btn px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-sm text-label-sm whitespace-nowrap transition-colors" type="button">
+          VIPs (22)
+        </button>
+</div>
+<!-- Quick Sort / Branch Filter Dropdowns -->
+<div class="flex items-center gap-space-xs shrink-0">
+<div class="flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant text-label-sm font-label-sm cursor-pointer hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">sort</span>
+<span>Sort: Highest Debt</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- TWO COLUMN WORKSPACE (Table 63%, Profile Slide-over 37%) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: LEDGER DIRECTORY TABLE (~62% = col-span-7 or col-span-8) -->
+<div class="lg:col-span-7 flex flex-col gap-space-sm">
+<div class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden">
+<!-- Table Subheader Summary -->
+<div class="px-space-md py-space-sm bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Active Debtors Book</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Balogun Market Main Shed</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">14 accounts flagged</span>
+</div>
+<!-- Table Content -->
+<div class="overflow-x-auto">
+<table class="w-full text-left" id="debtors-table">
+<thead>
+<tr class="bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm">
+<th class="py-2.5 pl-space-md pr-space-xs w-8">
+<input class="rounded accent-primary cursor-pointer w-3.5 h-3.5" title="Select all rows" type="checkbox"/>
+</th>
+<th class="py-2.5 px-space-xs font-semibold">Customer</th>
+<th class="py-2.5 px-space-xs font-semibold">Balance Due</th>
+<th class="py-2.5 px-space-xs font-semibold">Credit Limit</th>
+<th class="py-2.5 px-space-xs font-semibold">Aging / State</th>
+<th class="py-2.5 pr-space-md pl-space-xs text-right font-semibold">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-sm text-body-sm">
+<!-- ROW 1 (Active/Selected: Mama Chinedu) -->
+<tr class="customer-row bg-primary-fixed/30 hover:bg-primary-fixed/40 cursor-pointer transition-colors" data-customer-id="mama-chinedu">
+<td class="py-space-sm pl-space-md pr-space-xs">
+<input checked="" class="rounded accent-primary cursor-pointer w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary font-bold font-label-sm text-label-sm flex items-center justify-center shrink-0">
+                        MC
+                      </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Mama Chinedu</span>
+<span class="material-symbols-outlined text-[14px] text-primary" title="Verified VIP">stars</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate text-[11px]">+234 803 123 4567 • Stall B12</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-xs">
+<span class="font-label-md text-label-md font-bold text-error">₦14,200</span>
+<span class="block text-[10px] text-on-surface-variant">Last: Today</span>
+</td>
+<td class="py-space-sm px-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface">₦25,000</span>
+<span class="block text-[10px] text-secondary font-semibold">56.8% used</span>
+</td>
+<td class="py-space-sm px-space-xs">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-[11px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                      4 days ago
+                    </span>
+</td>
+<td class="py-space-sm pr-space-md pl-space-xs text-right">
+<button class="btn-quick-remind inline-flex items-center gap-1 px-space-xs py-1 rounded bg-secondary-fixed text-on-secondary-fixed hover:bg-secondary-fixed-dim text-[11px] font-semibold transition-colors" data-customer="Mama Chinedu" type="button">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+<span>Remind</span>
+</button>
+</td>
+</tr>
+<!-- ROW 2: Alhaji Bello -->
+<tr class="customer-row hover:bg-surface-container-low cursor-pointer transition-colors" data-customer-id="alhaji-bello">
+<td class="py-space-sm pl-space-md pr-space-xs">
+<input class="rounded accent-primary cursor-pointer w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface font-bold font-label-sm text-label-sm flex items-center justify-center shrink-0">
+                        AB
+                      </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Alhaji Bello</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate text-[11px]">+234 802 334 9910 • Grains Dist.</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-xs">
+<span class="font-label-md text-label-md font-bold text-error">₦25,000</span>
+<span class="block text-[10px] text-on-surface-variant">Last: Yesterday</span>
+</td>
+<td class="py-space-sm px-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface">₦50,000</span>
+<span class="block text-[10px] text-on-surface-variant">50% used</span>
+</td>
+<td class="py-space-sm px-space-xs">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-semibold">
+                      Yesterday
+                    </span>
+</td>
+<td class="py-space-sm pr-space-md pl-space-xs text-right">
+<button class="btn-quick-remind inline-flex items-center gap-1 px-space-xs py-1 rounded bg-secondary-fixed text-on-secondary-fixed hover:bg-secondary-fixed-dim text-[11px] font-semibold transition-colors" data-customer="Alhaji Bello" type="button">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+<span>Remind</span>
+</button>
+</td>
+</tr>
+<!-- ROW 3: Iya Basit -->
+<tr class="customer-row hover:bg-surface-container-low cursor-pointer transition-colors" data-customer-id="iya-basit">
+<td class="py-space-sm pl-space-md pr-space-xs">
+<input class="rounded accent-primary cursor-pointer w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface font-bold font-label-sm text-label-sm flex items-center justify-center shrink-0">
+                        IB
+                      </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Iya Basit</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate text-[11px]">+234 814 550 2100 • Food Canteen</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-xs">
+<span class="font-label-md text-label-md font-bold text-error">₦9,500</span>
+<span class="block text-[10px] text-on-surface-variant">Last: 6d ago</span>
+</td>
+<td class="py-space-sm px-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface">₦15,000</span>
+<span class="block text-[10px] text-on-surface-variant">63% used</span>
+</td>
+<td class="py-space-sm px-space-xs">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant text-[11px] font-semibold">
+                      Due Tomorrow
+                    </span>
+</td>
+<td class="py-space-sm pr-space-md pl-space-xs text-right">
+<button class="btn-quick-remind inline-flex items-center gap-1 px-space-xs py-1 rounded bg-secondary-fixed text-on-secondary-fixed hover:bg-secondary-fixed-dim text-[11px] font-semibold transition-colors" data-customer="Iya Basit" type="button">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+<span>Remind</span>
+</button>
+</td>
+</tr>
+<!-- ROW 4: Brother Emeka (Overdue > 7d) -->
+<tr class="customer-row hover:bg-surface-container-low cursor-pointer transition-colors" data-customer-id="brother-emeka">
+<td class="py-space-sm pl-space-md pr-space-xs">
+<input checked="" class="rounded accent-primary cursor-pointer w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-error-container text-on-error-container font-bold font-label-sm text-label-sm flex items-center justify-center shrink-0">
+                        BE
+                      </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Brother Emeka</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate text-[11px]">+234 809 771 8832 • Electronics Stall #4</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-xs">
+<span class="font-label-md text-label-md font-bold text-error">₦18,600</span>
+<span class="block text-[10px] text-on-surface-variant">Last: 12d ago</span>
+</td>
+<td class="py-space-sm px-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface">₦20,000</span>
+<span class="block text-[10px] text-error font-semibold">93% utilized</span>
+</td>
+<td class="py-space-sm px-space-xs">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container text-[11px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                      Overdue 5 days
+                    </span>
+</td>
+<td class="py-space-sm pr-space-md pl-space-xs text-right">
+<button class="btn-quick-remind inline-flex items-center gap-1 px-space-xs py-1 rounded bg-secondary-fixed text-on-secondary-fixed hover:bg-secondary-fixed-dim text-[11px] font-semibold transition-colors" data-customer="Brother Emeka" type="button">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+<span>Remind</span>
+</button>
+</td>
+</tr>
+<!-- ROW 5: Mama Ngozi -->
+<tr class="customer-row hover:bg-surface-container-low cursor-pointer transition-colors" data-customer-id="mama-ngozi">
+<td class="py-space-sm pl-space-md pr-space-xs">
+<input class="rounded accent-primary cursor-pointer w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface font-bold font-label-sm text-label-sm flex items-center justify-center shrink-0">
+                        MN
+                      </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Mama Ngozi</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate text-[11px]">+234 703 118 4492 • Tailoring Shop</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-xs">
+<span class="font-label-md text-label-md font-bold text-error">₦6,800</span>
+<span class="block text-[10px] text-on-surface-variant">Last: 09:15 AM</span>
+</td>
+<td class="py-space-sm px-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface">₦10,000</span>
+<span class="block text-[10px] text-on-surface-variant">68% used</span>
+</td>
+<td class="py-space-sm px-space-xs">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-semibold">
+                      Fresh Sale
+                    </span>
+</td>
+<td class="py-space-sm pr-space-md pl-space-xs text-right">
+<button class="btn-quick-remind inline-flex items-center gap-1 px-space-xs py-1 rounded bg-secondary-fixed text-on-secondary-fixed hover:bg-secondary-fixed-dim text-[11px] font-semibold transition-colors" data-customer="Mama Ngozi" type="button">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+<span>Remind</span>
+</button>
+</td>
+</tr>
+<!-- ROW 6: Chidi Trader -->
+<tr class="customer-row hover:bg-surface-container-low cursor-pointer transition-colors" data-customer-id="chidi-trader">
+<td class="py-space-sm pl-space-md pr-space-xs">
+<input checked="" class="rounded accent-primary cursor-pointer w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-error-container text-on-error-container font-bold font-label-sm text-label-sm flex items-center justify-center shrink-0">
+                        CT
+                      </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Chidi Trader</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate text-[11px]">+234 805 990 1244 • Motor Parts</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-xs">
+<span class="font-label-md text-label-md font-bold text-error">₦12,400</span>
+<span class="block text-[10px] text-on-surface-variant">Last: 9d ago</span>
+</td>
+<td class="py-space-sm px-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface">₦30,000</span>
+<span class="block text-[10px] text-on-surface-variant">41% used</span>
+</td>
+<td class="py-space-sm px-space-xs">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container text-[11px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                      Overdue 2 days
+                    </span>
+</td>
+<td class="py-space-sm pr-space-md pl-space-xs text-right">
+<button class="btn-quick-remind inline-flex items-center gap-1 px-space-xs py-1 rounded bg-secondary-fixed text-on-secondary-fixed hover:bg-secondary-fixed-dim text-[11px] font-semibold transition-colors" data-customer="Chidi Trader" type="button">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+<span>Remind</span>
+</button>
+</td>
+</tr>
+<!-- ROW 7: Madam Kemi -->
+<tr class="customer-row hover:bg-surface-container-low cursor-pointer transition-colors" data-customer-id="madam-kemi">
+<td class="py-space-sm pl-space-md pr-space-xs">
+<input class="rounded accent-primary cursor-pointer w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface font-bold font-label-sm text-label-sm flex items-center justify-center shrink-0">
+                        MK
+                      </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Madam Kemi</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate text-[11px]">+234 812 400 6755 • Beauty Salon</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-xs">
+<span class="font-label-md text-label-md font-bold text-error">₦4,500</span>
+<span class="block text-[10px] text-on-surface-variant">Last: 3d ago</span>
+</td>
+<td class="py-space-sm px-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface">₦10,000</span>
+<span class="block text-[10px] text-secondary font-semibold">45% used</span>
+</td>
+<td class="py-space-sm px-space-xs">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-semibold">
+                      3 days ago
+                    </span>
+</td>
+<td class="py-space-sm pr-space-md pl-space-xs text-right">
+<button class="btn-quick-remind inline-flex items-center gap-1 px-space-xs py-1 rounded bg-secondary-fixed text-on-secondary-fixed hover:bg-secondary-fixed-dim text-[11px] font-semibold transition-colors" data-customer="Madam Kemi" type="button">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+<span>Remind</span>
+</button>
+</td>
+</tr>
+<!-- ROW 8: Uncle Fatai (Overdue > 7d) -->
+<tr class="customer-row hover:bg-surface-container-low cursor-pointer transition-colors" data-customer-id="uncle-fatai">
+<td class="py-space-sm pl-space-md pr-space-xs">
+<input checked="" class="rounded accent-primary cursor-pointer w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-error-container text-on-error-container font-bold font-label-sm text-label-sm flex items-center justify-center shrink-0">
+                        UF
+                      </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">Uncle Fatai</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate text-[11px]">+234 803 661 7890 • Transport Union</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-xs">
+<span class="font-label-md text-label-md font-bold text-error">₦8,200</span>
+<span class="block text-[10px] text-on-surface-variant">Last: 15d ago</span>
+</td>
+<td class="py-space-sm px-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface">₦15,000</span>
+<span class="block text-[10px] text-on-surface-variant">54% used</span>
+</td>
+<td class="py-space-sm px-space-xs">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container text-[11px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                      Overdue 8 days
+                    </span>
+</td>
+<td class="py-space-sm pr-space-md pl-space-xs text-right">
+<button class="btn-quick-remind inline-flex items-center gap-1 px-space-xs py-1 rounded bg-secondary-fixed text-on-secondary-fixed hover:bg-secondary-fixed-dim text-[11px] font-semibold transition-colors" data-customer="Uncle Fatai" type="button">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+<span>Remind</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination Footer -->
+<div class="px-space-md py-space-sm bg-surface-container-lowest flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span>Showing</span>
+<span class="font-semibold text-on-surface">1–8</span>
+<span>of</span>
+<span class="font-semibold text-on-surface">14</span>
+<span>owing customers</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Rows:</span>
+<select class="bg-surface-container-low text-on-surface text-label-sm font-label-sm rounded px-space-xs py-1 border-0 outline-none">
+<option>8</option>
+<option>15</option>
+<option>25</option>
+</select>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded flex items-center justify-center bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors disabled:opacity-40" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded flex items-center justify-center bg-primary-container text-on-primary font-bold text-label-sm" type="button">
+                  1
+                </button>
+<button class="w-8 h-8 rounded flex items-center justify-center bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors font-label-sm" type="button">
+                  2
+                </button>
+<button class="w-8 h-8 rounded flex items-center justify-center bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Tips Callout -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">tips_and_updates</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Balogun Market WhatsApp Recovery Tip</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Friendly reminders dispatched before 12:00 PM WAT on weekdays receive an 84% same-day bank settlement rate. Bank transfer confirmation codes automatically clear debtor records upon validation.
+            </p>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: ACTIVE CUSTOMER CREDIT DOSSIER (~38% = col-span-5) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md" id="customer-dossier-panel">
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-lg flex flex-col gap-space-lg">
+<!-- Profile Header -->
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-primary text-on-primary font-headline-sm text-headline-sm font-bold flex items-center justify-center shrink-0 shadow-sm">
+                MC
+              </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Mama Chinedu</h2>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-semibold">VIP Client</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium">Blessing Nkechi Okoro</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">store</span>
+                  Stall B-12, Balogun Modern Market
+                </span>
+<span class="font-body-sm text-body-sm text-primary flex items-center gap-1 font-semibold mt-0.5">
+<span class="material-symbols-outlined text-[14px]">phone</span>
+                  +234 803 123 4567
+                </span>
+</div>
+</div>
+<!-- Header Quick Actions -->
+<div class="flex items-center gap-1 shrink-0">
+<button class="w-8 h-8 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center justify-center transition-colors" title="Call customer" type="button">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center justify-center transition-colors" title="Print customer ledger statement" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center justify-center transition-colors" title="Edit Customer Details" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</div>
+<!-- Credit Health & Stats Widget -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-baseline justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Current Balance Due</span>
+<span class="font-headline-md text-headline-md text-error font-bold mt-0.5">₦14,200</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Credit Limit</span>
+<span class="font-label-lg text-label-lg text-on-surface font-bold mt-0.5">₦25,000</span>
+</div>
+</div>
+<!-- Utilization Bar -->
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden flex">
+<div class="bg-error h-full rounded-full transition-all duration-300" style="width: 56.8%"></div>
+</div>
+<div class="flex items-center justify-between text-[11px] font-label-sm text-on-surface-variant">
+<span>56.8% Limit Utilized</span>
+<span class="text-secondary font-semibold">₦10,800 available credit</span>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lifetime Purchases: <strong class="text-on-surface">₦342,000</strong></span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">100% Historical Pay Rate</span>
+</div>
+</div>
+<!-- Main Actions: Record Payment / Add Debt -->
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="h-10 px-space-sm rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors shadow-sm flex items-center justify-center gap-space-xs font-label-md text-label-md font-semibold" id="btn-record-payment" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">payments</span>
+<span>Record Payment</span>
+</button>
+<button class="h-10 px-space-sm rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors shadow-sm flex items-center justify-center gap-space-xs font-label-md text-label-md font-semibold" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">add_shopping_cart</span>
+<span>+ Add Credit Sale</span>
+</button>
+</div>
+<!-- WHATSAPP 1-TAP REMINDER PREVIEW (Authentic Chat Card) -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">chat</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">1-Tap WhatsApp Reminder</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Live Preview</span>
+</div>
+<!-- Template switcher buttons -->
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed text-[11px] font-label-sm font-semibold" type="button">
+                Polite (Default)
+              </button>
+<button class="px-2 py-1 rounded bg-surface-container-low text-on-surface-variant hover:text-on-surface text-[11px] font-label-sm" type="button">
+                Urgent Overdue
+              </button>
+<button class="px-2 py-1 rounded bg-surface-container-low text-on-surface-variant hover:text-on-surface text-[11px] font-label-sm" type="button">
+                Custom Edit
+              </button>
+</div>
+<!-- WhatsApp Chat Preview Bubble -->
+<div class="p-space-md rounded-xl bg-secondary-fixed/20 relative shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant">
+<span class="font-semibold text-secondary">Adaeze Provisions • Automated Desk</span>
+<span>Just now</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+                Hello <strong>Mama Chinedu</strong>! Greetings from Adaeze Provisions (Balogun Market Stall #01). 👋<br/><br/>
+                This is a gentle reminder regarding your outstanding balance of <span class="font-bold text-error bg-error-container px-1 py-0.5 rounded">₦14,200</span> from your purchase on 14-Oct (Golden Terra Oil 2.5L, Peak Milk).<br/><br/>
+                You can easily pay via OPay / Moniepoint bank transfer to:<br/>
+<strong>Bank: Access Bank</strong><br/>
+<strong>Account: 0123456789</strong><br/>
+<strong>Name: Adaeze Provisions</strong><br/><br/>
+                Thank you for your trusted partnership and patronage! 🙏
+              </p>
+<div class="flex items-center justify-end gap-1 text-[11px] text-secondary font-semibold pt-1">
+<span>Direct WhatsApp API Ready</span>
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+</div>
+</div>
+<!-- Send Action Button -->
+<a class="h-11 rounded-lg bg-secondary text-on-secondary hover:bg-secondary/90 transition-colors shadow-sm flex items-center justify-center gap-space-xs font-label-md text-label-md font-bold mt-1" href="https://wa.me/2348031234567?text=Hello%20Mama%20Chinedu!%20Greetings%20from%20Adaeze%20Provisions%20(Balogun%20Market).%20This%20is%20a%20gentle%20reminder%20regarding%20your%20balance%20of%20%E2%82%A614,200.%20Bank:%20Access%20Bank%200123456789." rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Send via WhatsApp (+234 803 123 4567)</span>
+</a>
+</div>
+<!-- Customer Ledger History Timeline -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Ledger &amp; Settlement Log</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Last 30 Days</span>
+</div>
+<div class="flex flex-col gap-2 relative">
+<!-- Item 1: Recent Credit Sale -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-xs">
+<div class="w-7 h-7 rounded-lg bg-error-container text-on-error-container flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Credit Sale #BZ-1049</span>
+<span class="text-[10px] text-on-surface-variant font-mono">11:42 AM</span>
+</div>
+<span class="text-[11px] text-on-surface-variant">Golden Terra Oil 2.5L x1, Peak Milk x2 pkts</span>
+</div>
+</div>
+<div class="flex flex-col text-right shrink-0">
+<span class="font-label-sm text-label-sm font-bold text-error">+₦14,200</span>
+<span class="text-[10px] text-on-surface-variant">Bal: ₦14,200</span>
+</div>
+</div>
+<!-- Item 2: Payment Received -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-xs">
+<div class="w-7 h-7 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Settlement: OPay Transfer</span>
+<span class="text-[10px] text-on-surface-variant font-mono">10-Oct</span>
+</div>
+<span class="text-[11px] text-secondary font-semibold">Reference: OPY-77391-BAL</span>
+</div>
+</div>
+<div class="flex flex-col text-right shrink-0">
+<span class="font-label-sm text-label-sm font-bold text-secondary">-₦18,000</span>
+<span class="text-[10px] text-secondary font-semibold">Cleared (₦0)</span>
+</div>
+</div>
+<!-- Item 3: Older Credit Sale -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-xs">
+<div class="w-7 h-7 rounded-lg bg-surface-container text-on-surface flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Credit Sale #BZ-0988</span>
+<span class="text-[10px] text-on-surface-variant font-mono">06-Oct</span>
+</div>
+<span class="text-[11px] text-on-surface-variant">Indomie Belle Full x2 cartons</span>
+</div>
+</div>
+<div class="flex flex-col text-right shrink-0">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">+₦18,000</span>
+<span class="text-[10px] text-on-surface-variant">Bal: ₦18,000</span>
+</div>
+</div>
+<!-- Item 4: Older Cash Settlement -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-xs">
+<div class="w-7 h-7 rounded-lg bg-surface-container text-on-surface flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">payments</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Cash Settlement</span>
+<span class="text-[10px] text-on-surface-variant font-mono">28-Sep</span>
+</div>
+<span class="text-[11px] text-on-surface-variant">Collected at shop counter</span>
+</div>
+</div>
+<div class="flex flex-col text-right shrink-0">
+<span class="font-label-sm text-label-sm font-bold text-secondary">-₦12,500</span>
+<span class="text-[10px] text-secondary font-semibold">Cleared (₦0)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- TOAST / NOTIFICATION (Interactive micro-feedback) -->
+<div class="fixed bottom-6 right-6 px-space-md py-space-sm rounded-lg bg-inverse-surface text-inverse-on-surface shadow-xl flex items-center gap-space-sm z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="toast-notification">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]" id="toast-icon">check_circle</span>
+<span class="font-label-md text-label-md" id="toast-msg">WhatsApp Reminder queued successfully.</span>
+</div>
+</div>
+<script>
+  (function() {
+    // Simple toast helper
+    function showToast(message, icon = 'check_circle') {
+      const toast = document.getElementById('toast-notification');
+      const msgElem = document.getElementById('toast-msg');
+      const iconElem = document.getElementById('toast-icon');
+      if (!toast || !msgElem) return;
+
+      msgElem.textContent = message;
+      if (iconElem) iconElem.textContent = icon;
+      toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 3200);
+    }
+
+    // Quick reminder button clicks
+    document.querySelectorAll('.btn-quick-remind').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const customer = btn.getAttribute('data-customer') || 'Customer';
+        showToast(`WhatsApp reminder dispatched for ${customer}`, 'send');
+      });
+    });
+
+    // Batch Remind All button
+    const batchBtn = document.getElementById('btn-batch-remind');
+    if (batchBtn) {
+      batchBtn.addEventListener('click', () => {
+        showToast('Dispatched 5 overdue reminders via WhatsApp Business API', 'checklist_rtl');
+      });
+    }
+
+    // Record payment button demo
+    const payBtn = document.getElementById('btn-record-payment');
+    if (payBtn) {
+      payBtn.addEventListener('click', () => {
+        showToast('Payment Settlement modal ready: Select OPay or Cash', 'payments');
+      });
+    }
+
+    // Search bar shortcut '/' focus
+    window.addEventListener('keydown', (e) => {
+      if (e.key === '/' && document.activeElement.tagName !== 'INPUT') {
+        e.preventDefault();
+        const searchInput = document.getElementById('customer-search-input');
+        if (searchInput) searchInput.focus();
+      }
+    });
+
+    // Quick tab styling switch
+    const tabs = document.querySelectorAll('.tab-btn');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => {
+          t.classList.remove('bg-primary-container', 'text-on-primary', 'shadow-sm', 'font-semibold');
+          t.classList.add('text-on-surface-variant');
+        });
+        tab.classList.remove('text-on-surface-variant');
+        tab.classList.add('bg-primary-container', 'text-on-primary', 'shadow-sm', 'font-semibold');
+      });
+    });
+
+    // Row selection toggle
+    const rows = document.querySelectorAll('.customer-row');
+    rows.forEach(row => {
+      row.addEventListener('click', () => {
+        rows.forEach(r => r.classList.remove('bg-primary-fixed/30', 'hover:bg-primary-fixed/40'));
+        row.classList.add('bg-primary-fixed/30', 'hover:bg-primary-fixed/40');
+      });
+    });
+  })();
+</script></main></div></body></html>

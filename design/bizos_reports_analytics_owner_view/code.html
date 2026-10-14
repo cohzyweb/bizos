@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#eff4ff", "primary": "#005c55", "on-tertiary-container": "#ffe6cc", "outline-variant": "#bdc9c6", "on-surface": "#0b1c30", "on-secondary-container": "#00714d", "secondary-fixed-dim": "#4edea3", "inverse-surface": "#213145", "surface-container-lowest": "#ffffff", "surface-dim": "#cbdbf5", "on-secondary-fixed-variant": "#005236", "on-primary": "#ffffff", "on-tertiary-fixed-variant": "#653e00", "secondary-fixed": "#6ffbbe", "primary-container": "#0f766e", "on-primary-container": "#a3faef", "tertiary": "#734700", "surface-container-highest": "#d3e4fe", "background": "#f8f9ff", "on-tertiary": "#ffffff", "on-error": "#ffffff", "surface-tint": "#006a63", "error-container": "#ffdad6", "inverse-primary": "#80d5cb", "on-secondary": "#ffffff", "secondary-container": "#6cf8bb", "surface-container": "#e5eeff", "outline": "#6e7977", "surface": "#f8f9ff", "primary-fixed-dim": "#80d5cb", "tertiary-fixed": "#ffddb8", "surface-bright": "#f8f9ff", "tertiary-fixed-dim": "#ffb95f", "on-secondary-fixed": "#002113", "on-primary-fixed": "#00201d", "on-tertiary-fixed": "#2a1700", "primary-fixed": "#9cf2e8", "error": "#ba1a1a", "secondary": "#006c49", "inverse-on-surface": "#eaf1ff", "on-primary-fixed-variant": "#00504a", "on-error-container": "#93000a", "on-background": "#0b1c30", "surface-container-high": "#dce9ff", "on-surface-variant": "#3e4947", "tertiary-container": "#945d00", "surface-variant": "#d3e4fe" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-tablet": "1.5rem", "space-md": "0.75rem", "space-xs": "0.25rem", "gutter-desktop": "1.5rem", "gutter": "1.25rem", "space-lg": "1.25rem", "margin-desktop": "2rem", "space-sm": "0.5rem", "space-xl": "2rem", "margin": "1rem" }, "fontFamily": { "display-hero": ["Plus Jakarta Sans"], "label-md": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Inter"], "body-lg": ["Inter"], "metric-numeral": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-lg": ["Inter"], "headline-sm": ["Plus Jakarta Sans"], "label-sm": ["Inter"], "body-sm": ["Inter"] }, "fontSize": { "display-hero": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600"}], "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "metric-numeral": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "headline-lg-mobile": ["26px", {"lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700"}], "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}], "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600"}], "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}] } } } }</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col flex-1 overflow-y-auto"><div class="p-space-lg flex flex-col gap-space-md"><div class="flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[22px]">point_of_sale</span></div><div class="flex items-baseline gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">BizOs</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant uppercase tracking-wider font-bold">Retail OS</span></div></div></div><div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs overflow-hidden"><span class="material-symbols-outlined text-primary text-[18px] shrink-0">storefront</span><div class="flex flex-col truncate"><span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Adaeze Provisions</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Balogun Branch #01</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px] shrink-0">unfold_more</span></div></div><nav class="flex-1 px-space-md flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="font-label-lg text-label-lg">Dashboard</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="new-sale" href="#"><span class="font-label-lg text-label-lg">New Sale (POS)</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-mono">F2</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="products-inventory" href="#"><span class="font-label-lg text-label-lg">Products &amp; Inventory</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant">42/50</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="customers-debts" href="#"><span class="font-label-lg text-label-lg">Customers &amp; Debts</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-semibold">14 owing</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="sales-history" href="#"><span class="font-label-lg text-label-lg">Sales History</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg bg-primary-container text-on-primary font-semibold transition-colors" data-path="reports" href="#"><span class="font-label-lg text-label-lg">Reports (Owner)</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="font-label-lg text-label-lg">Settings</span></a></nav></div><div class="p-space-md flex flex-col gap-space-sm"><div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary"></span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Synced</span><span class="font-body-sm text-body-sm text-on-surface-variant text-[10px] leading-tight">Offline-ready storage</span></div></div><span class="material-symbols-outlined text-secondary text-[16px]">cloud_done</span></div><a class="p-space-sm rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center gap-space-xs hover:bg-secondary-fixed-dim transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">chat</span><span class="font-label-md text-label-md font-semibold">Chat on WhatsApp</span></a><div class="pt-space-xs flex items-center justify-between px-space-xs"><div class="flex items-center gap-space-sm overflow-hidden"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col truncate"><span class="font-label-md text-label-md text-on-surface font-semibold truncate">Adaeze Okonkwo</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Shop Owner</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0">logout</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-lg flex-1 max-w-xl"><div class="w-full flex items-center gap-space-sm px-space-md py-space-xs rounded-lg bg-surface-container-low text-on-surface-variant"><span class="material-symbols-outlined text-[20px]">search</span><span class="font-body-sm text-body-sm text-on-surface-variant flex-1 select-none">Search inventory, sales, customers...</span><kbd class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-mono">/</kbd></div></div><div class="flex items-center gap-space-lg"><div class="hidden xl:flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-secondary-fixed text-on-secondary-fixed"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-label-sm text-label-sm font-semibold">Synced • All terminals online</span></div><div class="hidden lg:flex flex-col text-right"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Today, 14 Oct</span><span class="font-body-sm text-body-sm text-on-surface-variant">11:42 AM WAT</span></div><button class="w-9 h-9 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container flex items-center justify-center relative transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error"></span></button><a class="h-10 px-space-md rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md font-semibold flex items-center gap-space-xs transition-colors shadow-[0_1px_8px_rgba(0,0,0,0.04)]" data-path="new-sale" href="#"><span class="material-symbols-outlined text-[18px]">add</span><span>New Sale</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="max-w-[1200px] w-full mx-auto px-space-md lg:px-space-xl py-space-lg flex flex-col gap-space-lg">
+<!-- Top Action Bar & Executive Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Reports &amp; Analytics</h1>
+<div class="flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">lock</span>
+<span class="font-bold tracking-wide uppercase">Owner Confidential</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container/40 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            Real-time Balogun Sync
+          </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Executive financial intelligence, margin analysis, and sales velocity for <span class="font-semibold text-on-surface">Adaeze Provisions (Balogun Branch #01)</span>
+</p>
+</div>
+<!-- Quick Owner Controls & Actions -->
+<div class="flex flex-wrap items-center gap-space-xs sm:gap-space-sm">
+<button class="h-10 px-space-md rounded-lg bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container hover:text-on-surface shadow-sm font-label-md text-label-md flex items-center gap-space-xs transition-colors" id="privacy-toggle" onclick="togglePrivacy()" title="Mask financial figures for discreet viewing">
+<span class="material-symbols-outlined text-[18px]" id="privacy-icon">visibility</span>
+<span id="privacy-label">Hide Figures</span>
+</button>
+<button class="h-10 px-space-md rounded-lg bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container hover:text-on-surface shadow-sm font-label-md text-label-md flex items-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Excel / CSV</span>
+</button>
+<button class="h-10 px-space-md rounded-lg bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container hover:text-on-surface shadow-sm font-label-md text-label-md flex items-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+<span>Z-Report PDF</span>
+</button>
+<button class="h-10 px-space-md rounded-lg bg-primary text-on-primary hover:bg-primary-container shadow-sm font-label-md text-label-md flex items-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-[18px]">send_to_mobile</span>
+<span>Send via WhatsApp</span>
+</button>
+</div>
+</div>
+<!-- Filters & Period Bar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm p-space-sm rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center gap-1 overflow-x-auto pb-1 md:pb-0">
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container transition-colors whitespace-nowrap">Today</button>
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container transition-colors whitespace-nowrap">This Week</button>
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md bg-primary-container text-on-primary font-semibold shadow-xs whitespace-nowrap">This Month (Oct 2024)</button>
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container transition-colors whitespace-nowrap">Last Month (Sept)</button>
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container transition-colors whitespace-nowrap">Q3 Performance</button>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-primary">calendar_today</span>
+<span>01 Oct – 14 Oct 2024</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(14 days elapsed)</span>
+</div>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" title="Refresh metrics">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+</button>
+</div>
+</div>
+<!-- Top Executive KPI Summary Row (4 Stat Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1: Gross Sales -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Total Revenue (Gross)</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold confidential-value">₦2,485,600</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">.00</span>
+</div>
+</div>
+<span class="w-10 h-10 rounded-lg bg-surface-container-low text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">payments</span>
+</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="flex items-center gap-1 font-semibold text-secondary">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+              +22.4% <span class="font-normal text-on-surface-variant">vs Sept pace</span>
+</span>
+<span class="text-on-surface-variant">684 orders</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full" style="width: 78%;"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant pt-0.5">
+<span>Avg Basket: <strong class="text-on-surface confidential-value">₦3,634</strong></span>
+<span>Target: ₦3.2M</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Net Profit & Margin -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Estimated Net Profit</span>
+<span class="px-1.5 py-0.2 rounded bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-[10px] font-bold">21.8%</span>
+</div>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-lg text-headline-lg text-primary font-bold confidential-value">₦542,800</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">.00</span>
+</div>
+</div>
+<span class="w-10 h-10 rounded-lg bg-surface-container-low text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">account_balance_wallet</span>
+</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="flex items-center gap-1 font-semibold text-secondary">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+              +₦84,200 <span class="font-normal text-on-surface-variant">gain</span>
+</span>
+<span class="text-on-surface-variant">Cost: <strong class="text-on-surface confidential-value">₦1.94M</strong></span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden flex">
+<div class="bg-secondary h-1.5" style="width: 21.8%;" title="Net Margin: 21.8%"></div>
+<div class="bg-surface-variant h-1.5" style="width: 78.2%;" title="COGS: 78.2%"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant pt-0.5">
+<span>Wholesale Margin Health</span>
+<span class="text-secondary font-semibold">Optimal</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Realized Cash & Liquidity -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Realized Cash in Hand/Bank</span>
+<span class="px-1.5 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[10px] font-bold">94.9%</span>
+</div>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold confidential-value">₦2,359,300</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">.00</span>
+</div>
+</div>
+<span class="w-10 h-10 rounded-lg bg-surface-container-low text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">savings</span>
+</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Liquidity Multi-bar -->
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden flex">
+<div class="bg-primary h-2" style="width: 57.1%;" title="Physical Cash: 57.1%"></div>
+<div class="bg-secondary h-2" style="width: 37.8%;" title="Bank &amp; POS: 37.8%"></div>
+<div class="bg-error h-2" style="width: 5.1%;" title="Store Credit Pending: 5.1%"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm pt-0.5">
+<span class="flex items-center gap-1 text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+              Cash: <strong class="text-on-surface confidential-value">₦1.42M</strong>
+</span>
+<span class="flex items-center gap-1 text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-secondary inline-block"></span>
+              Bank: <strong class="text-on-surface confidential-value">₦939k</strong>
+</span>
+</div>
+</div>
+</div>
+<!-- Card 4: Debtor Collection & Credit Risk -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Store Credit / "Who Owes Me"</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-lg text-headline-lg text-error font-bold confidential-value">₦126,300</span>
+<span class="font-label-sm text-label-sm text-error font-medium">.00</span>
+</div>
+</div>
+<span class="w-10 h-10 rounded-lg bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">pending_actions</span>
+</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">14 Active Debtors</span>
+<span class="text-secondary font-semibold confidential-value">₦388.5k collected</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-1.5 rounded-full" style="width: 89.2%;"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant pt-0.5">
+<span>Recovery Rate: <strong class="text-on-surface">89.2%</strong></span>
+<a class="text-primary hover:underline font-semibold flex items-center gap-0.5" href="#">
+<span>View Ledgers</span>
+<span class="material-symbols-outlined text-[13px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Middle Section: Analytical Visualizations & Payment Mix Split (12 Col Grid) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start">
+<!-- Left (8 Cols): Revenue & Margin Velocity Chart -->
+<div class="lg:col-span-8 p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-sm border-b-0">
+<div>
+<div class="flex items-center gap-space-xs">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Revenue Velocity &amp; Daily Margins</h2>
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-primary font-label-sm text-label-sm font-semibold">14 Days Run Rate</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Track daily gross cash flow vs baseline inventory procurement costs.</p>
+</div>
+<!-- Chart Visual Legend -->
+<div class="flex items-center gap-space-md font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-xs bg-primary"></span>
+<span>Gross Sales (₦)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-xs bg-secondary"></span>
+<span>Estimated Net Margin</span>
+</div>
+</div>
+</div>
+<!-- SVG Analytical Chart (Custom Bar & Trend Visualizer) -->
+<div class="relative w-full h-64 bg-surface-container-lowest flex flex-col justify-end pt-6">
+<!-- Background Grid Guides -->
+<div class="absolute inset-x-0 top-2 flex flex-col justify-between h-48 pointer-events-none opacity-40">
+<div class="border-b border-dashed border-outline-variant flex justify-between text-[10px] text-on-surface-variant font-mono">
+<span class="confidential-value">₦250k</span>
+</div>
+<div class="border-b border-dashed border-outline-variant flex justify-between text-[10px] text-on-surface-variant font-mono">
+<span class="confidential-value">₦180k</span>
+</div>
+<div class="border-b border-dashed border-outline-variant flex justify-between text-[10px] text-on-surface-variant font-mono">
+<span class="confidential-value">₦100k</span>
+</div>
+<div class="border-b border-dashed border-outline-variant flex justify-between text-[10px] text-on-surface-variant font-mono">
+<span class="confidential-value">₦0</span>
+</div>
+</div>
+<!-- Dynamic SVG Chart Canvas -->
+<svg class="w-full h-48 overflow-visible" preserveaspectratio="none" viewbox="0 0 700 180">
+<defs>
+<lineargradient id="primaryBarGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#0f766e"></stop>
+<stop offset="100%" stop-color="#005c55"></stop>
+</lineargradient>
+<lineargradient id="profitTrendFill" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#006c49" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#006c49" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Profit Area under line -->
+<polygon fill="url(#profitTrendFill)" points="25,145 75,138 125,128 175,135 225,120 275,124 325,115 375,110 425,112 475,108 525,95 575,68 625,118 675,98 675,170 25,170"></polygon>
+<!-- Bars for Daily Sales -->
+<!-- Day 1 -->
+<rect fill="url(#primaryBarGrad)" height="85" opacity="0.85" rx="3" width="14" x="18" y="85"></rect>
+<!-- Day 2 -->
+<rect fill="url(#primaryBarGrad)" height="94" opacity="0.85" rx="3" width="14" x="68" y="76"></rect>
+<!-- Day 3 -->
+<rect fill="url(#primaryBarGrad)" height="105" opacity="0.85" rx="3" width="14" x="118" y="65"></rect>
+<!-- Day 4 -->
+<rect fill="url(#primaryBarGrad)" height="92" opacity="0.85" rx="3" width="14" x="168" y="78"></rect>
+<!-- Day 5 (Balogun Friday rush) -->
+<rect fill="url(#primaryBarGrad)" height="122" opacity="0.9" rx="3" width="14" x="218" y="48"></rect>
+<!-- Day 6 (Saturday rush) -->
+<rect fill="url(#primaryBarGrad)" height="118" opacity="0.9" rx="3" width="14" x="268" y="52"></rect>
+<!-- Day 7 (Sunday quiet) -->
+<rect fill="#cbd5e1" height="55" opacity="0.9" rx="3" width="14" x="318" y="115"></rect>
+<!-- Day 8 -->
+<rect fill="url(#primaryBarGrad)" height="100" opacity="0.85" rx="3" width="14" x="368" y="70"></rect>
+<!-- Day 9 -->
+<rect fill="url(#primaryBarGrad)" height="108" opacity="0.85" rx="3" width="14" x="418" y="62"></rect>
+<!-- Day 10 -->
+<rect fill="url(#primaryBarGrad)" height="112" opacity="0.85" rx="3" width="14" x="468" y="58"></rect>
+<!-- Day 11 (Friday restock prep) -->
+<rect fill="url(#primaryBarGrad)" height="130" opacity="0.9" rx="3" width="14" x="518" y="40"></rect>
+<!-- Day 12 (Peak Saturday - Oct 12 Market Rush) -->
+<rect fill="#0f766e" height="158" rx="3" width="14" x="568" y="12"></rect>
+<!-- Peak Indicator Badge in SVG -->
+<g transform="translate(540, -4)">
+<rect fill="#0b1c30" height="18" rx="4" width="70" x="0" y="0"></rect>
+<text fill="#ffffff" font-family="Plus Jakarta Sans" font-size="9" font-weight="700" text-anchor="middle" x="35" y="12">₦245k Peak</text>
+</g>
+<!-- Day 13 (Sunday) -->
+<rect fill="#cbd5e1" height="52" opacity="0.9" rx="3" width="14" x="618" y="118"></rect>
+<!-- Day 14 (Today so far) -->
+<rect fill="#6ffbbe" height="125" rx="3" width="14" x="668" y="45"></rect>
+<!-- Margin Polyline -->
+<polyline fill="none" points="25,145 75,138 125,128 175,135 225,120 275,124 325,152 375,128 425,124 475,120 525,108 575,78 625,154 675,115" stroke="#006c49" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></polyline>
+<!-- Data points on profit line -->
+<circle cx="575" cy="78" fill="#006c49" r="4.5" stroke="#ffffff" stroke-width="2"></circle>
+<circle cx="675" cy="115" fill="#006c49" r="4" stroke="#ffffff" stroke-width="2"></circle>
+</svg>
+<!-- Day Labels Axis -->
+<div class="flex justify-between items-center px-1 pt-2 font-mono text-[11px] text-on-surface-variant">
+<span>01 Oct</span>
+<span>03 Oct</span>
+<span>05 Oct</span>
+<span>07 Oct</span>
+<span>09 Oct</span>
+<span>11 Oct</span>
+<span class="font-bold text-primary">12 Oct (Sat)</span>
+<span class="font-bold text-on-surface">14 Oct (Today)</span>
+</div>
+</div>
+<!-- Analytical Highlights Footer -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">bolt</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Peak Trading Velocity</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">11:00 AM – 2:30 PM WAT</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">verified</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Highest Sales Day</span>
+<span class="font-label-md text-label-md text-on-surface font-bold confidential-value">Sat 12 Oct (₦245,000)</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px]">speed</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Terminal Uptime</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">99.8% (0 local drops)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right (4 Cols): Payment Channels & Fee Intelligence -->
+<div class="lg:col-span-4 p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Settlement Mix</h2>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">pie_chart</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Breakdown of incoming customer tenders &amp; transaction merchant fees.</p>
+</div>
+<!-- Payment Breakdown List -->
+<div class="flex flex-col gap-space-sm">
+<!-- Cash Row -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center font-bold font-label-md text-label-md">
+                ₦
+              </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Physical Cash (Till)</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">₦0.00 Merchant Fee</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-md text-label-md text-on-surface font-bold confidential-value">₦1,420,000</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">57.1% share</span>
+</div>
+</div>
+<!-- OPay Bank Transfer -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">account_balance</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">OPay Instant Transfer</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Instant push webhook</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-md text-label-md text-on-surface font-bold confidential-value">₦642,300</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">25.8% share</span>
+</div>
+</div>
+<!-- Moniepoint POS -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed text-on-primary-fixed-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">credit_card</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Moniepoint POS Terminal</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Fee: ₦1,485 (0.5% cap)</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-md text-label-md text-on-surface font-bold confidential-value">₦297,000</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">12.0% share</span>
+</div>
+</div>
+<!-- Store Credit / Debt -->
+<div class="p-space-sm rounded-lg bg-error-container/30 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">book</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Customer Ledger Credit</span>
+<span class="font-label-sm text-label-sm text-error font-medium">Pending Adaeze Collection</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-md text-label-md text-error font-bold confidential-value">₦126,300</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">5.1% share</span>
+</div>
+</div>
+</div>
+<!-- WhatsApp Receipts Value Card -->
+<div class="p-space-md rounded-xl bg-gradient-to-br from-secondary-fixed/40 to-surface-container-low flex items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<span class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Paperless WhatsApp Receipts</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">639 digital invoices sent (93.4% rate). Saved <strong class="text-on-surface font-semibold confidential-value">~₦24,000</strong> in thermal rolls this month.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Profitability & Performance Table (Bottom Bento Component) -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<!-- Table Header & Filter Bar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Product Contribution &amp; Margin Leaderboard</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-semibold">Top 6 Drivers</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Realized margins computed against wholesale Balogun procurement invoices.
+          </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<!-- Search in Table -->
+<div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant w-48 sm:w-60">
+<span class="material-symbols-outlined text-[18px]">search</span>
+<input class="bg-transparent border-0 outline-none font-body-sm text-body-sm text-on-surface w-full placeholder:text-on-surface-variant" placeholder="Filter SKU or item..." type="text"/>
+</div>
+<!-- Category Filter -->
+<select class="h-9 px-space-sm rounded-lg bg-surface-container-low font-label-md text-label-md text-on-surface border-0 outline-none cursor-pointer">
+<option>All Inventory</option>
+<option>Cooking &amp; Oils</option>
+<option>Dairy &amp; Beverages</option>
+<option>Packaged Noodles</option>
+<option>Toiletries</option>
+</select>
+<!-- Sort Button -->
+<button class="h-9 px-space-sm rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px]">swap_vert</span>
+<span>Sort: Net Profit</span>
+</button>
+</div>
+</div>
+<!-- Table View -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-2.5 px-space-md rounded-l-lg">Rank &amp; Item Details</th>
+<th class="py-2.5 px-space-md text-center">Category</th>
+<th class="py-2.5 px-space-md text-right">Units Sold</th>
+<th class="py-2.5 px-space-md text-right">Cost Price (₦)</th>
+<th class="py-2.5 px-space-md text-right">Retail Price (₦)</th>
+<th class="py-2.5 px-space-md text-right">Total Revenue (₦)</th>
+<th class="py-2.5 px-space-md text-right">Net Margin</th>
+<th class="py-2.5 px-space-md rounded-r-lg text-center">Turn Velocity</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md divide-y-0">
+<!-- Row 1: Golden Terra Oil -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold">1</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Golden Terra Oil 2.5L</span>
+<span class="font-mono text-[11px] text-on-surface-variant">SKU-OIL-GT25</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Edibles</span>
+</td>
+<td class="py-3 px-space-md text-right font-semibold text-on-surface">142 units</td>
+<td class="py-3 px-space-md text-right font-mono confidential-value">₦10,800</td>
+<td class="py-3 px-space-md text-right font-mono confidential-value">₦12,300</td>
+<td class="py-3 px-space-md text-right font-mono font-bold text-on-surface confidential-value">₦1,746,600</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-bold text-secondary font-mono confidential-value">₦213,000</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">12.2% margin</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">High • 10.1/day</span>
+</td>
+</tr>
+<!-- Row 2: Peak Milk Tin -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center justify-center font-bold">2</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Peak Milk Tin 400g</span>
+<span class="font-mono text-[11px] text-on-surface-variant">SKU-DAI-PK40</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Dairy</span>
+</td>
+<td class="py-3 px-space-md text-right font-semibold text-on-surface">480 tins</td>
+<td class="py-3 px-space-md text-right font-mono confidential-value">₦540</td>
+<td class="py-3 px-space-md text-right font-mono confidential-value">₦650</td>
+<td class="py-3 px-space-md text-right font-mono font-bold text-on-surface confidential-value">₦312,000</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-bold text-secondary font-mono confidential-value">₦52,800</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">16.9% margin</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">Fast • 34.2/day</span>
+</td>
+</tr>
+<!-- Row 3: Indomie Hungryman -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center justify-center font-bold">3</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Indomie Hungryman (Carton)</span>
+<span class="font-mono text-[11px] text-on-surface-variant">SKU-NDL-IH24</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Noodles</span>
+</td>
+<td class="py-3 px-space-md text-right font-semibold text-on-surface">64 cartons</td>
+<td class="py-3 px-space-md text-right font-mono confidential-value">₦7,800</td>
+<td class="py-3 px-space-md text-right font-mono confidential-value">₦8,900</td>
+<td class="py-3 px-space-md text-right font-mono font-bold text-on-surface confidential-value">₦569,600</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-bold text-secondary font-mono confidential-value">₦70,400</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">12.4% margin</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">Steady • 4.5/day</span>
+</td>
+</tr>
+<!-- Row 4: Eva Water 75cl Pack -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center justify-center font-bold">4</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Eva Water 75cl (Pack of 12)</span>
+<span class="font-mono text-[11px] text-on-surface-variant">SKU-BEV-EV75</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Beverages</span>
+</td>
+<td class="py-3 px-space-md text-right font-semibold text-on-surface">185 packs</td>
+<td class="py-3 px-space-md text-right font-mono confidential-value">₦1,600</td>
+<td class="py-3 px-space-md text-right font-mono confidential-value">₦2,000</td>
+<td class="py-3 px-space-md text-right font-mono font-bold text-on-surface confidential-value">₦370,000</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-bold text-secondary font-mono confidential-value">₦74,000</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">20.0% margin</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">High Margin</span>
+</td>
+</tr>
+<!-- Row 5: Milo Refill Pack 500g -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center justify-center font-bold">5</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Milo Refill Pack 500g</span>
+<span class="font-mono text-[11px] text-on-surface-variant">SKU-BEV-ML50</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Beverages</span>
+</td>
+<td class="py-3 px-space-md text-right font-semibold text-on-surface">110 packs</td>
+<td class="py-3 px-space-md text-right font-mono confidential-value">₦1,900</td>
+<td class="py-3 px-space-md text-right font-mono confidential-value">₦2,200</td>
+<td class="py-3 px-space-md text-right font-mono font-bold text-on-surface confidential-value">₦242,000</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-bold text-secondary font-mono confidential-value">₦33,000</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">13.6% margin</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">Moderate</span>
+</td>
+</tr>
+<!-- Row 6: Close Up Herbal 140g -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center justify-center font-bold">6</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Close Up Herbal 140g</span>
+<span class="font-mono text-[11px] text-on-surface-variant">SKU-TOI-CU14</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Toiletries</span>
+</td>
+<td class="py-3 px-space-md text-right font-semibold text-on-surface">160 tubes</td>
+<td class="py-3 px-space-md text-right font-mono confidential-value">₦580</td>
+<td class="py-3 px-space-md text-right font-mono confidential-value">₦700</td>
+<td class="py-3 px-space-md text-right font-mono font-bold text-on-surface confidential-value">₦112,000</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex flex-col items-end">
+<span class="font-bold text-secondary font-mono confidential-value">₦19,200</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">17.1% margin</span>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">Standard</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Actionable Owner Intelligence Card (Local Balogun Wholesale Advice) -->
+<div class="p-space-md rounded-xl bg-surface-container-low border-0 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm">
+<span class="w-9 h-9 rounded-lg bg-tertiary-container text-on-tertiary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">lightbulb</span>
+</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Owner Profit Strategy: Golden Terra Oil Bulk Pre-Order</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Golden Terra Oil drives <strong>39%</strong> of your branch turnover but holds only a 12.2% margin. Balogun Central Wholesalers price hike expected on Nov 1st. Locking in <strong>30 cartons</strong> before Friday protects ₦45,000 in branch net profit.
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md font-semibold transition-colors">
+            Dismiss Tip
+          </button>
+<button class="px-space-md py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md font-semibold transition-colors">
+            Draft Restock PO
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let privacyActive = false;
+  function togglePrivacy() {
+    privacyActive = !privacyActive;
+    const elements = document.querySelectorAll('.confidential-value');
+    const label = document.getElementById('privacy-label');
+    const icon = document.getElementById('privacy-icon');
+    
+    elements.forEach(el => {
+      if (privacyActive) {
+        if (!el.getAttribute('data-original')) {
+          el.setAttribute('data-original', el.innerText);
+        }
+        el.innerText = '••••••';
+        el.classList.add('opacity-40');
+      } else {
+        el.innerText = el.getAttribute('data-original') || el.innerText;
+        el.classList.remove('opacity-40');
+      }
+    });
+
+    if (privacyActive) {
+      label.innerText = 'Show Figures';
+      icon.innerText = 'visibility_off';
+    } else {
+      label.innerText = 'Hide Figures';
+      icon.innerText = 'visibility';
+    }
+  }
+</script></main></div></body></html>
