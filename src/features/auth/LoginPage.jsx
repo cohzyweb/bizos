@@ -46,9 +46,7 @@ export default function LoginPage() {
       <h2 className="font-headline text-3xl font-extrabold tracking-tight text-slate-900">Welcome back</h2>
       <p className="mt-2 text-slate-600">Log in to manage your shop's sales, stock, and debts.</p>
 
-      <div className="mt-8">
-        <OAuthButtons />
-      </div>
+      <OAuthButtons />
 
       <form onSubmit={onSubmit} className="space-y-5">
         <Field label="Email address">

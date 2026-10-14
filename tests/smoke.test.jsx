@@ -117,17 +117,21 @@ describe('routing guards', () => {
     expect(await screen.findByText('Welcome back')).toBeInTheDocument()
   })
 
-  it('offers Google and Apple sign-in on the login page', async () => {
+  it('offers only email sign-in on the login page (OAuth switched off)', async () => {
     go('/login')
-    expect(await screen.findByRole('button', { name: /Google/ })).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: /Apple/ })).toBeInTheDocument()
-    expect(screen.getByText('or continue with email')).toBeInTheDocument()
+    expect(await screen.findByText('Welcome back')).toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: /Google/ })).not.toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: /Apple/ })).not.toBeInTheDocument()
+    expect(screen.queryByText('or continue with email')).not.toBeInTheDocument()
+    expect(screen.getByPlaceholderText('e.g. adaeze@myshop.ng')).toBeInTheDocument()
   })
 
-  it('offers Google and Apple sign-up on the signup page', async () => {
+  it('offers only email sign-up on the signup page (OAuth switched off)', async () => {
     go('/signup')
-    expect(await screen.findByRole('button', { name: /Google/ })).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: /Apple/ })).toBeInTheDocument()
+    expect(await screen.findByText('Create your account')).toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: /Google/ })).not.toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: /Apple/ })).not.toBeInTheDocument()
+    expect(screen.getByPlaceholderText('e.g. Adaeze Okonkwo')).toBeInTheDocument()
   })
 
   it('sends a logged-in user without a business to setup', async () => {
@@ -146,7 +150,7 @@ describe('routing guards', () => {
   })
 })
 
-describe('failed Google/Apple callback', () => {
+describe('failed OAuth callback', () => {
   it('shows the provider error and returns the user to login', async () => {
     // Supabase bounces back to "/" with error params when the round-trip
     // fails (redirect URL not allow-listed, provider disabled, consent denied).

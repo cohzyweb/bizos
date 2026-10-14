@@ -58,9 +58,7 @@ export default function SignupPage() {
       <h2 className="font-headline text-3xl font-extrabold tracking-tight text-slate-900">Create your account</h2>
       <p className="mt-2 text-slate-600">Full access is free while we launch.</p>
 
-      <div className="mt-8">
-        <OAuthButtons />
-      </div>
+      <OAuthButtons />
 
       <form onSubmit={onSubmit} className="space-y-5">
         <Field label="Full name">

@@ -27,23 +27,19 @@ function GoogleIcon() {
   )
 }
 
-function AppleIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-[18px] w-[18px]" fill="currentColor">
-      <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-    </svg>
-  )
-}
-
+// OAuth sign-in is switched off for now: neither Google nor Apple is enabled
+// on the Supabase project (Authentication → Providers). Re-enable by adding
+// entries back — the button grid adapts to however many are listed.
 const PROVIDERS = [
-  { id: 'google', label: 'Google', Icon: GoogleIcon },
-  { id: 'apple', label: 'Apple', Icon: AppleIcon },
+  // { id: 'google', label: 'Google', Icon: GoogleIcon },
 ]
 
-// "Continue with Google / Apple" buttons, shared by the login and signup pages.
+// "Continue with Google" button, shared by the login and signup pages.
 // Supabase redirects to the provider and back to `/`; if the provider
 // bounces back with an error, AuthProvider stashes it in `authError` and
 // returns the user here so the reason is visible.
+// (Apple is not enabled on the Supabase project yet — re-add it to PROVIDERS
+// along with an AppleIcon once Authentication → Providers → Apple is live.)
 export default function OAuthButtons() {
   const [busy, setBusy] = useState('')
   const [error, setError] = useState('')
@@ -81,23 +77,29 @@ export default function OAuthButtons() {
     }
   }
 
+  // OAuth is off and there is nothing to report — render nothing at all, so no
+  // orphaned gap is left above the email form.
+  if (!PROVIDERS.length && !message) return null
+
   return (
-    <div>
-      <div className="grid grid-cols-2 gap-3">
-        {PROVIDERS.map(({ id, label, Icon }) => (
-          <Button
-            key={id}
-            type="button"
-            variant="secondary"
-            loading={busy === id}
-            disabled={Boolean(busy)}
-            onClick={() => onClick(id)}
-          >
-            {busy !== id && <Icon />}
-            {label}
-          </Button>
-        ))}
-      </div>
+    <div className="mt-8">
+      {PROVIDERS.length > 0 && (
+        <div className={`grid gap-3 ${PROVIDERS.length > 1 ? 'grid-cols-2' : 'grid-cols-1'}`}>
+          {PROVIDERS.map(({ id, label, Icon }) => (
+            <Button
+              key={id}
+              type="button"
+              variant="secondary"
+              loading={busy === id}
+              disabled={Boolean(busy)}
+              onClick={() => onClick(id)}
+            >
+              {busy !== id && <Icon />}
+              {label}
+            </Button>
+          ))}
+        </div>
+      )}
 
       {message && (
         <p role="alert" className="mt-3 rounded-lg bg-red-50 px-3 py-2 text-sm font-medium text-red-700">
@@ -105,11 +107,13 @@ export default function OAuthButtons() {
         </p>
       )}
 
-      <div className="my-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-wide text-slate-400">
-        <span className="h-px flex-1 bg-slate-200" />
-        or continue with email
-        <span className="h-px flex-1 bg-slate-200" />
-      </div>
+      {PROVIDERS.length > 0 && (
+        <div className="my-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-wide text-slate-400">
+          <span className="h-px flex-1 bg-slate-200" />
+          or continue with email
+          <span className="h-px flex-1 bg-slate-200" />
+        </div>
+      )}
     </div>
   )
 }
