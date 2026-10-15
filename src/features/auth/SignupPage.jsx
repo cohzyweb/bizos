@@ -27,7 +27,7 @@ export default function SignupPage() {
     const { data, error } = await supabase.auth.signUp({
       email: email.trim(),
       password,
-      options: { data: { full_name: fullName.trim() }, emailRedirectTo: window.location.origin + '/login' },
+      options: { data: { full_name: fullName.trim() }, emailRedirectTo: window.location.origin + '/setup' },
     })
     setBusy(false)
     if (error) {
@@ -46,9 +46,11 @@ export default function SignupPage() {
       <AuthLayout>
         <h2 className="font-headline text-3xl font-extrabold tracking-tight text-slate-900">Check your email</h2>
         <p className="mt-3 text-slate-600">
-          We sent a confirmation link to <span className="font-semibold text-slate-900">{email}</span>. Open it, then come back and log in to continue.
+          We sent a confirmation link to <span className="font-semibold text-slate-900">{email}</span>. Open it to verify your email and start setting up your shop.
         </p>
-        <Link to="/login" className="mt-8 inline-block font-semibold text-teal-700 hover:underline">Go to log in →</Link>
+        <p className="mt-4 text-sm text-slate-500">
+          Already confirmed? <Link to="/login" className="font-semibold text-teal-700 hover:underline">Log in</Link>
+        </p>
       </AuthLayout>
     )
   }
