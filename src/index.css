@@ -2,6 +2,210 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ===========================================================================
+   Theme tokens
+   ---------------------------------------------------------------------------
+   Every colour the app can swap between light and dark is a custom property.
+   `:root` holds the light scheme, `.dark` (toggled by src/lib/theme.js and by
+   the inline script in index.html) holds the dark scheme. Tailwind resolves
+   each token through `rgb(var(…) / <alpha-value>)`, so opacity modifiers
+   still work — see tailwind.config.js.
+
+   Rule of thumb used for the dark palette:
+   • surfaces go deep navy-teal, text goes near-white
+   • the neutral ramp inverts (50 = darkest, 900 = lightest)
+   • tinted "50/100" chips become dark tinted chips with light text
+   • saturated brand fills (teal-600, red-500, gradients) stay put, because
+     white text sits on them in both schemes
+   =========================================================================== */
+:root {
+  color-scheme: light;
+
+  /* ---- semantic tokens ---- */
+  --c-surface: 248 249 255;
+  --c-surface-dim: 203 219 245;
+  --c-surface-bright: 248 249 255;
+  --c-surface-container-lowest: 255 255 255;
+  --c-surface-container-low: 239 244 255;
+  --c-surface-container: 229 238 255;
+  --c-surface-container-high: 220 233 255;
+  --c-surface-container-highest: 211 228 254;
+  --c-surface-variant: 211 228 254;
+  --c-surface-tint: 0 106 99;
+  --c-background: 248 249 255;
+  --c-on-surface: 11 28 48;
+  --c-on-surface-variant: 62 73 71;
+  --c-on-background: 11 28 48;
+  --c-inverse-surface: 33 49 69;
+  --c-inverse-on-surface: 234 241 255;
+  --c-outline: 110 121 119;
+  --c-outline-variant: 189 201 198;
+
+  --c-primary: 0 92 85;
+  --c-on-primary: 255 255 255;
+  --c-primary-container: 15 118 110;
+  --c-on-primary-container: 163 250 239;
+  --c-inverse-primary: 128 213 203;
+  --c-secondary: 0 108 73;
+  --c-on-secondary: 255 255 255;
+  --c-secondary-container: 108 248 187;
+  --c-on-secondary-container: 0 113 77;
+  --c-tertiary: 115 71 0;
+  --c-on-tertiary: 255 255 255;
+  --c-tertiary-container: 148 93 0;
+  --c-on-tertiary-container: 255 230 204;
+  --c-error: 186 26 26;
+  --c-on-error: 255 255 255;
+  --c-error-container: 255 218 214;
+  --c-on-error-container: 147 0 10;
+
+  /* Painted surfaces (`bg-white`) and the accent used for icons/text that
+     borrow the primary-container hue. */
+  --c-card: 255 255 255;
+  --c-accent-strong: 15 118 110;
+
+  /* ---- neutrals ---- */
+  --c-slate-50: 248 250 252;
+  --c-slate-100: 241 245 249;
+  --c-slate-200: 226 232 240;
+  --c-slate-300: 203 213 225;
+  --c-slate-400: 148 163 184;
+  --c-slate-500: 100 116 139;
+  --c-slate-600: 71 85 105;
+  --c-slate-700: 51 65 85;
+  --c-slate-800: 30 41 59;
+  --c-slate-900: 15 23 42;
+
+  /* ---- accents (only the shades the app uses) ---- */
+  --c-teal-50: 240 253 250;
+  --c-teal-100: 204 251 241;
+  --c-teal-700: 15 118 110;
+  --c-teal-800: 17 94 89;
+  --c-teal-900: 19 78 74;
+
+  --c-emerald-50: 236 253 245;
+  --c-emerald-100: 209 250 229;
+  --c-emerald-200: 167 243 208;
+  --c-emerald-600: 5 150 105;
+  --c-emerald-700: 4 120 87;
+  --c-emerald-800: 6 95 70;
+  --c-emerald-900: 6 78 59;
+
+  --c-amber-50: 255 251 235;
+  --c-amber-100: 254 243 199;
+  --c-amber-200: 253 230 138;
+  --c-amber-700: 180 83 9;
+  --c-amber-800: 146 64 14;
+
+  --c-red-50: 254 242 242;
+  --c-red-100: 254 226 226;
+  --c-red-600: 220 38 38;
+  --c-red-700: 185 28 28;
+
+  --c-rose-100: 255 228 230;
+  --c-rose-700: 190 18 60;
+
+  --c-blue-100: 219 234 254;
+  --c-blue-700: 29 78 216;
+
+  --c-indigo-100: 224 231 255;
+  --c-indigo-700: 67 56 202;
+}
+
+.dark {
+  color-scheme: dark;
+
+  /* ---- semantic tokens ---- */
+  --c-surface: 10 16 24;
+  --c-surface-dim: 6 11 17;
+  --c-surface-bright: 37 47 60;
+  --c-surface-container-lowest: 17 25 36;
+  --c-surface-container-low: 23 33 46;
+  --c-surface-container: 28 39 53;
+  --c-surface-container-high: 33 45 61;
+  --c-surface-container-highest: 38 51 68;
+  --c-surface-variant: 33 45 61;
+  --c-surface-tint: 128 213 203;
+  --c-background: 10 16 24;
+  --c-on-surface: 232 238 247;
+  --c-on-surface-variant: 176 190 205;
+  --c-on-background: 232 238 247;
+  --c-inverse-surface: 229 238 255;
+  --c-inverse-on-surface: 33 49 69;
+  --c-outline: 139 153 169;
+  --c-outline-variant: 57 71 86;
+
+  /* `primary` becomes the bright accent (it is mostly used for text/icons);
+     `primary-container` stays a deep teal because white text sits on it. */
+  --c-primary: 94 234 212;
+  --c-on-primary: 0 32 29;
+  --c-primary-container: 15 118 110;
+  --c-on-primary-container: 204 251 241;
+  --c-inverse-primary: 15 118 110;
+  --c-secondary: 110 231 183;
+  --c-on-secondary: 0 33 19;
+  --c-secondary-container: 13 94 63;
+  --c-on-secondary-container: 167 243 208;
+  --c-tertiary: 252 211 77;
+  --c-on-tertiary: 69 26 3;
+  --c-tertiary-container: 120 82 0;
+  --c-on-tertiary-container: 255 230 204;
+  --c-error: 252 165 165;
+  --c-on-error: 69 10 10;
+  --c-error-container: 127 29 29;
+  --c-on-error-container: 254 202 202;
+
+  --c-card: 17 25 36;
+  --c-accent-strong: 94 234 212;
+
+  /* ---- neutrals: the ramp runs backwards ---- */
+  --c-slate-50: 15 23 42;
+  --c-slate-100: 30 41 59;
+  --c-slate-200: 51 65 85;
+  --c-slate-300: 71 85 105;
+  --c-slate-400: 123 138 158;
+  --c-slate-500: 148 163 184;
+  --c-slate-600: 203 213 225;
+  --c-slate-700: 226 232 240;
+  --c-slate-800: 241 245 249;
+  --c-slate-900: 248 250 252;
+
+  /* ---- accents: tinted chips darken, accent text lightens ---- */
+  --c-teal-50: 4 47 46;
+  --c-teal-100: 15 61 58;
+  --c-teal-700: 94 234 212;
+  --c-teal-800: 153 246 228;
+  --c-teal-900: 204 251 241;
+
+  --c-emerald-50: 2 44 34;
+  --c-emerald-100: 6 78 59;
+  --c-emerald-200: 6 95 70;
+  --c-emerald-600: 52 211 153;
+  --c-emerald-700: 110 231 183;
+  --c-emerald-800: 167 243 208;
+  --c-emerald-900: 209 250 229;
+
+  --c-amber-50: 42 26 2;
+  --c-amber-100: 69 26 3;
+  --c-amber-200: 120 53 15;
+  --c-amber-700: 252 211 77;
+  --c-amber-800: 253 230 138;
+
+  --c-red-50: 43 10 10;
+  --c-red-100: 69 10 10;
+  --c-red-600: 252 165 165;
+  --c-red-700: 248 113 113;
+
+  --c-rose-100: 76 5 25;
+  --c-rose-700: 253 164 175;
+
+  --c-blue-100: 23 37 84;
+  --c-blue-700: 147 197 253;
+
+  --c-indigo-100: 30 27 75;
+  --c-indigo-700: 165 180 252;
+}
+
 @layer base {
   html {
     -webkit-tap-highlight-color: transparent;
@@ -66,5 +270,153 @@
   .animate-fade-in,
   .animate-draw-line {
     animation: none;
+  }
+}
+
+/* ===========================================================================
+   Dark-scheme adjustments that a token swap cannot express on its own.
+   These live outside the @layer blocks so they win over Tailwind utilities
+   of equal specificity, and they read their colours from custom properties
+   so the print block below can undo them.
+   =========================================================================== */
+/* `text-white` always sits on a saturated brand fill (teal, red, emerald,
+   the brand gradient), which stays dark in dark mode — keep it white
+   instead of letting it follow the card colour. */
+.dark .text-white {
+  color: #fff;
+}
+.dark .text-white\/80 {
+  color: rgb(255 255 255 / 0.8);
+}
+.dark .text-white\/70 {
+  color: rgb(255 255 255 / 0.7);
+}
+.dark .hover\:text-white:hover {
+  color: #fff;
+}
+.dark .group:hover .group-hover\:text-white {
+  color: #fff;
+}
+
+/* Frosted chips over the brand gradient keep their white wash. */
+.dark .bg-white\/10 {
+  background-color: rgb(255 255 255 / 0.1);
+}
+
+/* Icons, spinners and active nav labels borrow the primary-container hue,
+   which is too dark to read on a dark surface. */
+.dark .text-primary-container {
+  color: rgb(var(--c-accent-strong));
+}
+.dark .border-primary-container {
+  border-color: rgb(var(--c-accent-strong));
+}
+.dark .focus-ring:focus-visible {
+  outline-color: rgb(var(--c-accent-strong));
+}
+
+/* Shadows need more density once the page itself is dark. */
+.dark .shadow-lift {
+  box-shadow:
+    0 10px 25px -5px rgb(0 0 0 / 0.55),
+    0 8px 10px -6px rgb(0 0 0 / 0.4);
+}
+.dark .shadow-toast {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.6);
+}
+
+/* ===========================================================================
+   Print: receipts and slips always go on white paper. Re-stating the light
+   tokens (this block must stay after `.dark`) flips every var-driven colour
+   back, including `bg-white` cards and the overrides above.
+   =========================================================================== */
+@media print {
+  :root {
+    color-scheme: light;
+
+    --c-surface: 248 249 255;
+    --c-surface-dim: 203 219 245;
+    --c-surface-bright: 248 249 255;
+    --c-surface-container-lowest: 255 255 255;
+    --c-surface-container-low: 239 244 255;
+    --c-surface-container: 229 238 255;
+    --c-surface-container-high: 220 233 255;
+    --c-surface-container-highest: 211 228 254;
+    --c-surface-variant: 211 228 254;
+    --c-surface-tint: 0 106 99;
+    --c-background: 248 249 255;
+    --c-on-surface: 11 28 48;
+    --c-on-surface-variant: 62 73 71;
+    --c-on-background: 11 28 48;
+    --c-inverse-surface: 33 49 69;
+    --c-inverse-on-surface: 234 241 255;
+    --c-outline: 110 121 119;
+    --c-outline-variant: 189 201 198;
+
+    --c-primary: 0 92 85;
+    --c-on-primary: 255 255 255;
+    --c-primary-container: 15 118 110;
+    --c-on-primary-container: 163 250 239;
+    --c-inverse-primary: 128 213 203;
+    --c-secondary: 0 108 73;
+    --c-on-secondary: 255 255 255;
+    --c-secondary-container: 108 248 187;
+    --c-on-secondary-container: 0 113 77;
+    --c-tertiary: 115 71 0;
+    --c-on-tertiary: 255 255 255;
+    --c-tertiary-container: 148 93 0;
+    --c-on-tertiary-container: 255 230 204;
+    --c-error: 186 26 26;
+    --c-on-error: 255 255 255;
+    --c-error-container: 255 218 214;
+    --c-on-error-container: 147 0 10;
+
+    --c-card: 255 255 255;
+    --c-accent-strong: 15 118 110;
+
+    --c-slate-50: 248 250 252;
+    --c-slate-100: 241 245 249;
+    --c-slate-200: 226 232 240;
+    --c-slate-300: 203 213 225;
+    --c-slate-400: 148 163 184;
+    --c-slate-500: 100 116 139;
+    --c-slate-600: 71 85 105;
+    --c-slate-700: 51 65 85;
+    --c-slate-800: 30 41 59;
+    --c-slate-900: 15 23 42;
+
+    --c-teal-50: 240 253 250;
+    --c-teal-100: 204 251 241;
+    --c-teal-700: 15 118 110;
+    --c-teal-800: 17 94 89;
+    --c-teal-900: 19 78 74;
+
+    --c-emerald-50: 236 253 245;
+    --c-emerald-100: 209 250 229;
+    --c-emerald-200: 167 243 208;
+    --c-emerald-600: 5 150 105;
+    --c-emerald-700: 4 120 87;
+    --c-emerald-800: 6 95 70;
+    --c-emerald-900: 6 78 59;
+
+    --c-amber-50: 255 251 235;
+    --c-amber-100: 254 243 199;
+    --c-amber-200: 253 230 138;
+    --c-amber-700: 180 83 9;
+    --c-amber-800: 146 64 14;
+
+    --c-red-50: 254 242 242;
+    --c-red-100: 254 226 226;
+    --c-red-600: 220 38 38;
+    --c-red-700: 185 28 28;
+
+    --c-rose-100: 255 228 230;
+    --c-rose-700: 190 18 60;
+
+    --c-blue-100: 219 234 254;
+    --c-blue-700: 29 78 216;
+
+    --c-indigo-100: 224 231 255;
+    --c-indigo-700: 67 56 202;
   }
 }

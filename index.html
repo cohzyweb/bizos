@@ -6,6 +6,23 @@
     <meta name="theme-color" content="#0F766E" />
     <title>BizOs — Know your sales, your stock, and who owes you</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏪</text></svg>" />
+    <!-- Set the scheme before the first paint so a reload never flashes the
+         wrong theme. Mirrors src/lib/theme.js (keep the key in sync). -->
+    <script>
+      (function () {
+        try {
+          var mode = localStorage.getItem('bizos:theme');
+          if (mode !== 'light' && mode !== 'dark') {
+            mode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          }
+          if (mode === 'dark') document.documentElement.classList.add('dark');
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute('content', mode === 'dark' ? '#0B121B' : '#0F766E');
+        } catch (e) {
+          /* private mode / no storage: fall back to the light scheme */
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

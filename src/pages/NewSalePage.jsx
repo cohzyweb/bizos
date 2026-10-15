@@ -373,7 +373,7 @@ export default function NewSalePage() {
       className={cx(
         'focus-ring rounded px-2 py-2 text-xs font-bold transition-colors',
         payment === m.value
-          ? 'bg-primary text-white'
+          ? 'bg-primary text-on-primary'
           : 'bg-surface-container text-slate-600 hover:bg-surface-container-high hover:text-slate-900',
       )}
     >
@@ -851,7 +851,7 @@ export default function NewSalePage() {
       {/* ===== Success modal ===== */}
       {lastSale && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/50 p-4 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/50 p-4 backdrop-blur-sm"
           role="dialog"
           aria-modal="true"
           aria-label="Sale complete"

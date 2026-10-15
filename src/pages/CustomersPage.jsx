@@ -82,7 +82,7 @@ function ageChip(balance, oldestDebtAt, nowMs) {
 function Modal({ title, hint, onClose, children }) {
   return (
     <div
-      className="fixed inset-0 z-50 flex items-end justify-center bg-slate-900/40 sm:items-center sm:p-4"
+      className="fixed inset-0 z-50 flex items-end justify-center bg-slate-950/40 sm:items-center sm:p-4"
       onClick={onClose}
     >
       <div
@@ -941,7 +941,7 @@ export default function CustomersPage() {
                       href={whatsappHref(active.phone, messageText)}
                       target="_blank"
                       rel="noreferrer"
-                      className="focus-ring flex h-11 items-center justify-center gap-2 rounded bg-emerald-600 font-semibold text-white transition-colors hover:bg-emerald-700"
+                      className="focus-ring flex h-11 items-center justify-center gap-2 rounded bg-[#059669] font-semibold text-white transition-colors hover:bg-[#047857]"
                     >
                       <Send className="h-4 w-4" /> Send on WhatsApp
                     </a>

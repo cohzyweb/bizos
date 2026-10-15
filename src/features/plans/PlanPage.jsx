@@ -20,7 +20,7 @@ const ROWS = [
 
 function Cell({ v }) {
   if (v === true) return <Check className="mx-auto h-5 w-5 text-emerald-600" />
-  if (v === false) return <Minus className="mx-auto h-5 w-5 text-slate-300" />
+  if (v === false) return <Minus className="mx-auto h-5 w-5 text-slate-400" />
   return <span>{v}</span>
 }
 

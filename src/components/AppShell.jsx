@@ -2,10 +2,11 @@ import { useEffect } from 'react'
 import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 import {
   LayoutDashboard, ShoppingCart, Package, Users, Receipt, BarChart3, Settings,
-  Plus, Search, Bell, LogOut, Cloud, CloudOff, Menu, ChevronsUpDown,
+  Plus, Search, Bell, LogOut, Cloud, CloudOff, Menu, ChevronsUpDown, Moon, Sun,
 } from 'lucide-react'
 import { useAuth } from '../features/auth/AuthProvider'
 import { useOnlineStore } from '../lib/stores'
+import { useThemeStore } from '../lib/theme'
 import { Logo, Badge, cx } from './ui'
 import { initials, formatDate } from '../lib/format'
 
@@ -32,6 +33,8 @@ export default function AppShell() {
   const navigate = useNavigate()
   const { business, user, isOwner, signOut } = useAuth()
   const online = useOnlineStore((s) => s.online)
+  const themeMode = useThemeStore((s) => s.mode)
+  const toggleTheme = useThemeStore((s) => s.toggle)
 
   // F2 = New Sale from anywhere
   useEffect(() => {
@@ -122,6 +125,15 @@ export default function AppShell() {
             <span className="hidden text-right text-xs leading-tight text-slate-500 xl:block">
               <span className="block font-semibold text-slate-700">{formatDate(new Date(), { weekday: 'short' })}</span>
             </span>
+            <button
+              type="button"
+              onClick={toggleTheme}
+              aria-label={themeMode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+              title={themeMode === 'dark' ? 'Light mode' : 'Dark mode'}
+              className="focus-ring flex h-10 w-10 items-center justify-center rounded-full text-slate-500 hover:bg-slate-100"
+            >
+              {themeMode === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            </button>
             <button aria-label="Notifications" className="hidden h-10 w-10 items-center justify-center rounded-full text-slate-500 hover:bg-slate-100 md:flex">
               <Bell className="h-5 w-5" />
             </button>

@@ -329,9 +329,9 @@ export default function SalesHistoryPage() {
       {/* ===== KPI row ===== */}
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <div className="rounded-lg bg-brand-gradient p-5 text-white shadow-lift">
-          <p className="text-[11px] font-semibold uppercase tracking-wider text-teal-100">Today&apos;s gross sales</p>
+          <p className="text-[11px] font-semibold uppercase tracking-wider text-teal-200">Today&apos;s gross sales</p>
           <p className="tabular mt-2 font-headline text-3xl font-extrabold">{naira(grossToday)}</p>
-          <p className="mt-1 text-sm text-teal-100">
+          <p className="mt-1 text-sm text-teal-200">
             {todaySales.length} sale{todaySales.length === 1 ? '' : 's'} recorded
           </p>
         </div>
@@ -706,7 +706,7 @@ export default function SalesHistoryPage() {
       {/* ===== Void modal ===== */}
       {voidOpen && selected && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/40 p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/40 p-4"
           role="dialog"
           aria-modal="true"
           aria-labelledby="void-title"

@@ -28,12 +28,12 @@ export default function AuthLayout({ children }) {
               </span>
               <span>
                 <span className="block font-semibold">{title}</span>
-                <span className="text-sm text-teal-100">{body}</span>
+                <span className="text-sm text-teal-200">{body}</span>
               </span>
             </li>
           ))}
         </ul>
-        <div className="mt-auto flex items-center gap-2 pt-10 text-sm text-teal-100">
+        <div className="mt-auto flex items-center gap-2 pt-10 text-sm text-teal-200">
           <WifiOff className="h-4 w-4" /> Works offline. Your sales sync when you are back online.
         </div>
       </aside>

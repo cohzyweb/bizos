@@ -11,6 +11,7 @@ import {
   Info,
   Lock,
   MessageCircle,
+  Moon,
   Printer,
   ReceiptText,
   Rocket,
@@ -25,6 +26,7 @@ import { useEntitlements } from '../features/plans/useEntitlements'
 import { Badge, Button, Card, EmptyState, Field, Input, Spinner, cx } from '../components/ui'
 import { formatDate, formatTime, initials, naira } from '../lib/format'
 import { handlePlanError, toast, useUpgradeStore } from '../lib/stores'
+import { useThemeStore } from '../lib/theme'
 import { readPrefs, writePrefs } from '../lib/prefs'
 import { applyTemplate } from '../lib/whatsapp'
 
@@ -33,6 +35,7 @@ import { applyTemplate } from '../lib/whatsapp'
 // ---------------------------------------------------------------------------
 
 const SECTIONS = [
+  { id: 'appearance', label: 'Appearance', icon: Moon },
   { id: 'profile', label: 'Business Profile', icon: Store },
   { id: 'receipt', label: 'Receipt & Invoicing', icon: ReceiptText },
   { id: 'staff', label: 'Staff & Security', icon: ShieldCheck },
@@ -160,6 +163,8 @@ export default function SettingsPage() {
   const { business, businessId, user, isOwner, refresh } = useAuth()
   const { can, limit, launchAccess } = useEntitlements()
   const showUpgrade = useUpgradeStore((s) => s.show)
+  const themeMode = useThemeStore((s) => s.mode)
+  const setThemeMode = useThemeStore((s) => s.setMode)
   const qc = useQueryClient()
 
   const [form, setForm] = useState(null)
@@ -538,7 +543,28 @@ export default function SettingsPage() {
 
         {/* Panels */}
         <div className="min-w-0 space-y-5">
-          {/* ---- 1. Business Profile ---- */}
+          {/* ---- 1. Appearance ---- */}
+          <Section
+            id="appearance"
+            innerRef={(el) => {
+              sectionRefs.current.appearance = el
+            }}
+            icon={Moon}
+            title="Appearance"
+            hint="How BizOs looks while you work. Applies instantly."
+            action={<Badge tone="warn">Saved on this device</Badge>}
+          >
+            <div className="max-w-xl">
+              <ToggleRow
+                label="Dark mode"
+                hint="Darker surfaces and softer contrast — kinder on the eyes in a dim shop or at night."
+                checked={themeMode === 'dark'}
+                onChange={(v) => setThemeMode(v ? 'dark' : 'light')}
+              />
+            </div>
+          </Section>
+
+          {/* ---- 2. Business Profile ---- */}
           <Section
             id="profile"
             innerRef={(el) => {
@@ -580,7 +606,7 @@ export default function SettingsPage() {
             </div>
           </Section>
 
-          {/* ---- 2. Receipt & Invoicing ---- */}
+          {/* ---- 3. Receipt & Invoicing ---- */}
           <Section
             id="receipt"
             innerRef={(el) => {
@@ -718,7 +744,7 @@ export default function SettingsPage() {
             </div>
           </Section>
 
-          {/* ---- 3. Staff & Security ---- */}
+          {/* ---- 4. Staff & Security ---- */}
           <Section
             id="staff"
             innerRef={(el) => {
@@ -840,7 +866,7 @@ export default function SettingsPage() {
             )}
           </Section>
 
-          {/* ---- 4. WhatsApp Reminders ---- */}
+          {/* ---- 5. WhatsApp Reminders ---- */}
           <Section
             id="whatsapp"
             innerRef={(el) => {
@@ -902,7 +928,7 @@ export default function SettingsPage() {
             </div>
           </Section>
 
-          {/* ---- 5. Data & Sync ---- */}
+          {/* ---- 6. Data & Sync ---- */}
           <Section
             id="data"
             innerRef={(el) => {
@@ -973,7 +999,7 @@ export default function SettingsPage() {
       {/* ===== Add staff modal ===== */}
       {modal && (
         <div
-          className="fixed inset-0 z-50 flex items-end justify-center bg-slate-900/40 p-0 sm:items-center sm:p-4"
+          className="fixed inset-0 z-50 flex items-end justify-center bg-slate-950/40 p-0 sm:items-center sm:p-4"
           onClick={() => setModal(null)}
         >
           <div

@@ -5,11 +5,14 @@ export function cx(...parts) {
 }
 
 const buttonVariants = {
-  primary: 'bg-primary-container text-white hover:bg-teal-600 active:bg-teal-800 disabled:bg-slate-300',
+  // `active:`/`hover:` states on the primary button use fixed hexes: the
+  // teal-600/800 steps carry white text here, but the same steps flip to
+  // light tints elsewhere in dark mode (see src/index.css).
+  primary: 'bg-primary-container text-white hover:bg-teal-600 active:bg-[#115e59] disabled:bg-slate-300',
   secondary:
     'bg-white text-slate-700 border border-slate-200 hover:bg-teal-50 hover:border-primary-container disabled:text-slate-400',
   danger: 'bg-red-50 text-red-700 hover:bg-red-100 disabled:opacity-60',
-  solidDanger: 'bg-red-500 text-white hover:bg-red-600 disabled:opacity-60',
+  solidDanger: 'bg-red-500 text-white hover:bg-[#dc2626] disabled:opacity-60',
   soft: 'bg-emerald-100 text-emerald-800 hover:bg-emerald-200 disabled:opacity-60',
   ghost: 'text-slate-600 hover:bg-slate-100 disabled:opacity-60',
 }

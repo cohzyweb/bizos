@@ -133,7 +133,7 @@ function Header() {
           </Link>
           <Link
             to="/signup"
-            className="inline-flex items-center justify-center h-10 px-4 rounded bg-primary text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary-container transition-all hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:scale-95"
+            className="inline-flex items-center justify-center h-10 px-4 rounded bg-primary text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary-container hover:text-white transition-all hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:scale-95"
           >
             Start free
           </Link>
@@ -171,7 +171,7 @@ function Hero() {
             <Reveal delay={190} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-8">
               <Link
                 to="/signup"
-                className="group h-12 px-7 rounded bg-primary-container text-on-primary font-label-lg text-label-lg shadow-md hover:bg-primary transition-all flex items-center justify-center gap-2 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:scale-[0.98]"
+                className="group h-12 px-7 rounded bg-primary-container text-white hover:text-on-primary font-label-lg text-label-lg shadow-md hover:bg-primary transition-all flex items-center justify-center gap-2 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:scale-[0.98]"
               >
                 <span>Start free</span>
                 <ArrowRight className="h-[18px] w-[18px] transition-transform duration-300 group-hover:translate-x-1" />
@@ -301,7 +301,7 @@ function Hero() {
                   <span className="font-label-md text-label-md text-on-surface">Total:</span>
                   <span>₦18,500</span>
                 </div>
-                <button className="w-full h-10 rounded bg-primary-container text-on-primary font-label-md text-label-md font-semibold shadow-sm flex items-center justify-center gap-1.5 transition-colors hover:bg-primary">
+                <button className="w-full h-10 rounded bg-primary-container text-white hover:text-on-primary font-label-md text-label-md font-semibold shadow-sm flex items-center justify-center gap-1.5 transition-colors hover:bg-primary">
                   <ShoppingCart className="h-4 w-4" />
                   Complete Sale
                 </button>
@@ -786,7 +786,7 @@ function ShowcaseSection() {
                 </p>
               </div>
               <div className="flex items-center gap-2">
-                <button className="h-9 px-4 rounded bg-primary-container text-on-primary font-label-md text-label-md shadow-xs flex items-center gap-1.5">
+                <button className="h-9 px-4 rounded bg-primary-container text-white font-label-md text-label-md shadow-xs flex items-center gap-1.5">
                   <ShoppingCart className="h-4 w-4" /> New Sale (F2)
                 </button>
               </div>
@@ -1088,7 +1088,7 @@ function PricingSection() {
             </div>
               <Link
                 to="/signup"
-                className="w-full h-12 rounded bg-primary text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary-container transition-all flex items-center justify-center hover:-translate-y-0.5 active:scale-[0.98]"
+                className="w-full h-12 rounded bg-primary text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary-container hover:text-white transition-all flex items-center justify-center hover:-translate-y-0.5 active:scale-[0.98]"
               >
                 Get started free
               </Link>
@@ -1200,7 +1200,7 @@ function FaqSection() {
 
 function FinalCta() {
   return (
-    <section className="w-full py-16 bg-gradient-to-r from-primary to-primary-container text-on-primary">
+      <section className="w-full py-16 bg-brand-gradient text-white">
       <Reveal className="max-w-[1200px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop text-center">
         <h2 className="font-headline-lg text-headline-lg font-bold tracking-tight mb-4">
           Start running your shop with total confidence.
@@ -1218,7 +1218,7 @@ function FinalCta() {
           </Link>
           <a
             href="#faq"
-            className="h-12 px-6 rounded bg-primary-fixed/20 text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary-fixed/30 transition-all flex items-center justify-center gap-2 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
+            className="h-12 px-6 rounded bg-primary-fixed/20 text-white font-label-lg text-label-lg shadow-sm hover:bg-primary-fixed/30 transition-all flex items-center justify-center gap-2 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
           >
             <MessageCircle className="h-[18px] w-[18px]" />
             <span>Chat with us on WhatsApp</span>

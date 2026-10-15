@@ -466,13 +466,13 @@ export default function ReportsPage() {
           {/* ===== KPI row ===== */}
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <div className="rounded-lg bg-brand-gradient p-5 text-white shadow-lift">
-              <p className="text-[11px] font-semibold uppercase tracking-wider text-teal-100">Total sales</p>
+              <p className="text-[11px] font-semibold uppercase tracking-wider text-teal-200">Total sales</p>
               <p className="tabular mt-2 font-headline text-3xl font-extrabold">{money(totals.total)}</p>
-              <p className="mt-2 flex items-center gap-1.5 text-sm text-teal-100">
+              <p className="mt-2 flex items-center gap-1.5 text-sm text-teal-200">
                 <TrendingUp className="h-4 w-4" aria-hidden="true" />
                 {totals.count} sale{totals.count === 1 ? '' : 's'} in this range
               </p>
-              <p className="tabular mt-1 text-xs text-teal-100/90">Average sale {money(totals.avg)}</p>
+              <p className="tabular mt-1 text-xs text-teal-200/90">Average sale {money(totals.avg)}</p>
             </div>
 
             <Card className="shadow-lift">
@@ -534,7 +534,7 @@ export default function ReportsPage() {
               </div>
               {!canProfit || totals.profit === null ? (
                 <>
-                  <p className="mt-2 flex items-center gap-2 font-headline text-2xl font-bold text-slate-300">
+                  <p className="mt-2 flex items-center gap-2 font-headline text-2xl font-bold text-white/70">
                     <Lock className="h-6 w-6" aria-hidden="true" /> Pro
                   </p>
                   <button

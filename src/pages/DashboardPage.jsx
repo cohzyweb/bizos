@@ -102,13 +102,13 @@ export default function DashboardPage() {
       {/* ===== Stat cards ===== */}
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <div className="rounded-lg bg-brand-gradient p-5 text-white">
-          <p className="text-[11px] font-semibold uppercase tracking-wider text-teal-100">Today's sales</p>
+          <p className="text-[11px] font-semibold uppercase tracking-wider text-teal-200">Today's sales</p>
           <p className="tabular mt-2 font-headline text-4xl font-extrabold">{naira(today.total)}</p>
-          <p className="mt-1 text-sm text-teal-100">{today.count} sale{today.count === 1 ? '' : 's'} recorded</p>
+          <p className="mt-1 text-sm text-teal-200">{today.count} sale{today.count === 1 ? '' : 's'} recorded</p>
           <div className="mt-4 grid grid-cols-3 gap-2 rounded bg-white/10 p-3 text-xs">
-            <div><p className="text-teal-100">Cash</p><p className="tabular font-bold">{naira(today.cash)}</p></div>
-            <div><p className="text-teal-100">Transfer/POS</p><p className="tabular font-bold">{naira(today.transfer + today.pos)}</p></div>
-            <div><p className="text-teal-100">Credit</p><p className="tabular font-bold">{naira(today.credit)}</p></div>
+            <div><p className="text-teal-200">Cash</p><p className="tabular font-bold">{naira(today.cash)}</p></div>
+            <div><p className="text-teal-200">Transfer/POS</p><p className="tabular font-bold">{naira(today.transfer + today.pos)}</p></div>
+            <div><p className="text-teal-200">Credit</p><p className="tabular font-bold">{naira(today.credit)}</p></div>
           </div>
         </div>
 
@@ -121,7 +121,7 @@ export default function DashboardPage() {
             <p className="mt-3 text-sm text-slate-500">Only the shop owner can see profit.</p>
           ) : profitToday === null ? (
             <>
-              <p className="mt-2 flex items-center gap-2 font-headline text-2xl font-bold text-slate-300"><Lock className="h-6 w-6" /> Pro</p>
+              <p className="mt-2 flex items-center gap-2 font-headline text-2xl font-bold text-white/70"><Lock className="h-6 w-6" /> Pro</p>
               <button onClick={() => showUpgrade('profit_report')} className="mt-3 text-sm font-semibold text-teal-700 hover:underline">See how to unlock</button>
             </>
           ) : (
