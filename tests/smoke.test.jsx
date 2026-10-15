@@ -10,6 +10,7 @@ const state = {
   sessionFailure: null,
   sessionHang: false,
   getSessionError: null,
+  authCallback: null,
 }
 
 function builder(table, opts = {}) {
@@ -53,7 +54,10 @@ vi.mock('../src/lib/supabase', () => ({
         if (state.sessionHang) return new Promise(() => {})
         return { data: { session: state.session }, error: state.getSessionError ?? null }
       },
-      onAuthStateChange: () => ({ data: { subscription: { unsubscribe() {} } } }),
+      onAuthStateChange: (cb) => {
+        state.authCallback = cb
+        return { data: { subscription: { unsubscribe() {} } } }
+      },
       signOut: async () => {},
       signInWithPassword: async () => ({ error: null }),
       signInWithOAuth: async () => ({ data: { url: null, user: null, session: null }, error: null }),
@@ -98,6 +102,7 @@ beforeEach(() => {
   state.sessionFailure = null
   state.sessionHang = false
   state.getSessionError = null
+  state.authCallback = null
 })
 
 afterEach(() => {
@@ -371,5 +376,27 @@ describe('messaging a customer from their record', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Save' }))
 
     await waitFor(() => expect(state.tables.customers[0].phone).toBe('08123456789'))
+  })
+})
+
+describe('password recovery', () => {
+  it('sends a recovery link that landed on the wrong page to /reset-password', async () => {
+    go('/')
+    expect(await screen.findByRole('link', { name: 'Log in' })).toBeInTheDocument()
+
+    await act(async () => {
+      state.authCallback('PASSWORD_RECOVERY', session)
+    })
+
+    expect(await screen.findByRole('heading', { name: /checking your link/i })).toBeInTheDocument()
+    expect(window.location.pathname).toBe('/reset-password')
+  })
+
+  it('serves the reset form at /reset-password once the link session exists', async () => {
+    state.session = session
+    go('/reset-password')
+
+    expect(await screen.findByRole('heading', { name: /set a new password/i })).toBeInTheDocument()
+    expect(screen.getByText('adaeze@test.ng')).toBeInTheDocument()
   })
 })

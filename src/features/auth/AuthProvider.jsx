@@ -122,10 +122,17 @@ export function AuthProvider({ children }) {
       })
 
     // Keep this callback synchronous (no awaited Supabase calls inside it).
-    const { data: sub } = supabase.auth.onAuthStateChange((_event, next) => {
+    const { data: sub } = supabase.auth.onAuthStateChange((event, next) => {
       setSession(next)
       // A successful sign-in supersedes any failure we were showing.
       if (next) setAuthError(null)
+      // Recovery links can land on the wrong address (site URL fallback, or a
+      // host not yet in Supabase's redirect allow list). The reset token is
+      // already in the session either way — send them to the page where they
+      // can actually type a new password.
+      if (event === 'PASSWORD_RECOVERY' && window.location.pathname !== '/reset-password') {
+        navigate('/reset-password', { replace: true })
+      }
     })
     return () => {
       cancelled = true

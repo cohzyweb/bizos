@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { AuthProvider, useAuth } from '../features/auth/AuthProvider'
 import LoginPage from '../features/auth/LoginPage'
 import SignupPage from '../features/auth/SignupPage'
+import ResetPasswordPage from '../features/auth/ResetPasswordPage'
 import AppShell from '../components/AppShell'
 import Toaster from '../components/Toaster'
 import UpgradePrompt from '../features/plans/UpgradePrompt'
@@ -83,6 +84,12 @@ export default function App() {
             <Route element={<RequireAuth />}>
               <Route path="/setup" element={<SetupRoute />} />
             </Route>
+
+            {/* The emailed reset link arrives with a session already minted from
+                its token, so this page sits outside PublicOnly (which would
+                bounce a signed-in visitor away before they could set a
+                password). */}
+            <Route path="/reset-password" element={<ResetPasswordPage />} />
 
             <Route element={<HomeRoute />}>
               <Route element={<RequireBusiness />}>

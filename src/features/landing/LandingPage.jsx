@@ -23,6 +23,7 @@ import {
   MapPin,
   MessageCircle,
   MonitorSmartphone,
+  Moon,
   PackageX,
   PartyPopper,
   Plus,
@@ -34,6 +35,7 @@ import {
   ShoppingCart,
   Smartphone,
   SquarePlus,
+  Sun,
   TrendingDown,
   TrendingUp,
   User,
@@ -44,6 +46,7 @@ import {
 } from 'lucide-react'
 import { Logo } from '../../components/ui'
 import Reveal from '../../components/Reveal'
+import { useThemeStore } from '../../lib/theme'
 
 // Marketing page — ported from the Stitch export in design/code.html.
 // Logged-out visitors land here; logged-in users go to the dashboard.
@@ -99,6 +102,9 @@ function SectionHeading({ eyebrow, title, subtitle, className = 'mb-14' }) {
 }
 
 function Header() {
+  const themeMode = useThemeStore((s) => s.mode)
+  const toggleTheme = useThemeStore((s) => s.toggle)
+  const themeDark = themeMode === 'dark'
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-outline-variant/40 animate-fade-down">
       <div className="h-20 max-w-[1200px] mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between gap-space-md">
@@ -125,6 +131,16 @@ function Header() {
         </nav>
 
         <div className="flex items-center gap-space-md">
+          <button
+            type="button"
+            onClick={toggleTheme}
+            aria-label={themeDark ? 'Switch to light mode' : 'Switch to dark mode'}
+            aria-pressed={themeDark}
+            title={themeDark ? 'Light mode' : 'Dark mode'}
+            className="focus-ring inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"
+          >
+            {themeDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+          </button>
           <Link
             to="/login"
             className="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface px-space-sm py-space-xs transition-colors"

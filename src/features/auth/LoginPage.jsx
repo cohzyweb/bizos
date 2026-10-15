@@ -35,7 +35,7 @@ export default function LoginPage() {
     }
     setError('')
     const { error } = await supabase.auth.resetPasswordForEmail(email.trim(), {
-      redirectTo: window.location.origin + '/login',
+      redirectTo: window.location.origin + '/reset-password',
     })
     if (error) setError(error.message)
     else setResetSent(true)
@@ -68,7 +68,7 @@ export default function LoginPage() {
         </div>
 
         {error && <p role="alert" className="rounded-lg bg-red-50 px-3 py-2 text-sm font-medium text-red-700">{error}</p>}
-        {resetSent && <p role="alert" className="rounded-lg bg-emerald-50 px-3 py-2 text-sm font-medium text-emerald-700">Password reset link sent. Check your email.</p>}
+        {resetSent && <p role="alert" className="rounded-lg bg-emerald-50 px-3 py-2 text-sm font-medium text-emerald-700">Password reset link sent. Check your email and open it to choose a new password.</p>}
 
         <Button type="submit" size="lg" className="w-full" loading={busy}>
           Log in <LogIn className="h-4 w-4" />
